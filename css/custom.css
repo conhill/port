@@ -93,6 +93,9 @@ body {
   width: 100%;
   height: 850px;
 }
+.parallax-container{
+  background: #83a2d1;
+}
 .parallax-layer {
   width: 100%;
   height: 500px;
