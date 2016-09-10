@@ -1,46 +1,50 @@
 @font-face {
     font-family: Geometria;
-    src: url(../font/Geometria-Light.otf);
-}
-html{
-    background:black;
-}
-h1,h2,h3,h4,h5,h6{
-    text-transform: uppercase;
-}
+    src: url(../font/Geometria-Light.otf); }
+
+/* line 5, C:/Users/Dnoop/Desktop/Portfolio/css/custom.scss */
+html {
+    background: black; }
+
+/* line 8, C:/Users/Dnoop/Desktop/Portfolio/css/custom.scss */
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase; }
+
+/* line 11, C:/Users/Dnoop/Desktop/Portfolio/css/custom.scss */
 h1 {
     font-family: Geometria;
-    display: inline;
-}
+    display: inline; }
 
+/* line 16, C:/Users/Dnoop/Desktop/Portfolio/css/custom.scss */
 .connor-n-left {
-    display: inline;
-}
+    display: inline; }
 
+/* line 20, C:/Users/Dnoop/Desktop/Portfolio/css/custom.scss */
 .connor-n-right {
-    display: inline;
-}
+    display: inline; }
 
-#layer-0{
-    background: url('img/font-mountains.png');
-    width: inherit;
-}
-#layer-1{
-    background: url('img/back-hills.png');
-    width: inherit;
-}
+/* line 24, C:/Users/Dnoop/Desktop/Portfolio/css/custom.scss */
+#layer-0 {
+    background: url("img/font-mountains.png");
+    width: inherit; }
 
+/* line 28, C:/Users/Dnoop/Desktop/Portfolio/css/custom.scss */
+#layer-1 {
+    background: url("img/back-hills.png");
+    width: inherit; }
+
+/* line 33, C:/Users/Dnoop/Desktop/Portfolio/css/custom.scss */
 .p-box {
     width: 100%;
     height: 1080px;
     position: fixed;
-    -webkit-transform: translate3d(0,0,0);
-    -moz-transform: translate3d(0,0,0);
-    -ms-transform: translate3d(0,0,0);
-    -o-transform: translate3d(0,0,0);
-    pointer-events: none;
-}
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    pointer-events: none; }
 
+/* line 44, C:/Users/Dnoop/Desktop/Portfolio/css/custom.scss */
 .flex-container {
     padding: 20px;
     margin: 20px;
@@ -55,92 +59,137 @@ h1 {
     justify-content: flex-start;
     flex-wrap: wrap;
     align-content: flex-start;
-    align-items: baseline;
-    .flex-item {
-        background: lightsalmon;
-        padding: 5px;
-        width: 200px;
-        height: 150px;
-        margin: 10px;
-        line-height: 150px;
-        color: white;
-        font-weight: bold;
-        font-size: 2em;
-        text-align: center;
-        p {
-            font-size: 1.5rem;
-        }
-        h3 {
-            margin: -20px 0 0 0;
-            height: 40px;
-        }
-    }
-}
+    align-items: baseline; }
+/* line 59, C:/Users/Dnoop/Desktop/Portfolio/css/custom.scss */
+.flex-container .flex-item {
+    background: lightsalmon;
+    padding: 5px;
+    width: 225px;
+    height: 150px;
+    margin: 10px;
+    line-height: 150px;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center; }
+/* line 70, C:/Users/Dnoop/Desktop/Portfolio/css/custom.scss */
+.flex-container .flex-item p {
+    font-size: 1.5rem; }
+/* line 73, C:/Users/Dnoop/Desktop/Portfolio/css/custom.scss */
+.flex-container .flex-item h3 {
+    height: 40px; }
+
+/* line 80, C:/Users/Dnoop/Desktop/Portfolio/css/custom.scss */
 
 body {
-  background: #415a6c;
-  margin: 0;
-  font-family: 'Oswald';
+    background: #415a6c;
+    margin: 0;
+    font-family: 'Oswald';
 }
 .parallax-container {
-  position: fixed;
-  overflow: visible;
-  width: 100%;
-  height: 850px;
+    position: fixed;
+    overflow: visible;
+    width: 100%;
+    height: 850px;
+}
+.parallax-container{
+    background: #83a2d1;
 }
 .parallax-layer {
-  width: 100%;
-  height: 500px;
-  position: fixed;
-  left: 0;
-  top: 0;
-  background-position: bottom center;
-  background-repeat: repeat-x;
-  background-size: 960px 253px;
-}
-  .layer-0 {
+    width: 100%;
+    height: 500px;
+    position: fixed;
+    left: 0;
     top: 0;
-    z-index: 5;
-    background: #dbf0ff url('http://i.imgur.com/4hwp8up.png') no-repeat top 40px center;
-    background-size: 120px 138.5px;
-  }
-  .layer-1 {
-    top: -100px;
-    z-index: 5;
-    background-image: url('http://i.imgur.com/Ra2bzmb.png');
-  }
-  .layer-2 {
-    top: -50px;
-    z-index: 10;
-    background-image: url('http://i.imgur.com/jSOo9SK.png');
-  }
-  .layer-3 {
-    top: -10px;
-    z-index: 15;
-    background-image: url('http://i.imgur.com/DOZRBDj.png');
-  }
-  .layer-4 {
-    top: 65px;
-    z-index: 20;
-    background-image: url('http://i.imgur.com/JbSR9JY.png');
-  }
-  .layer-5 {
-    top: 150px;
-    z-index: 25;
-    background-image: url('/img/font-mountains.png');
-  }
-
-  
-.content {
-  position: absolute;
-  top: 600px;
-  background: #415a6c;
-  width: 100%;
-  min-height: 1500px;
+    background-position: bottom center;
+    background-repeat: repeat-x;
+    background-size: 960px 253px;
 }
-  .content h1 {
+.parallax-layer.layer-0 {
+    top: 110px;
+    width: 500px;
+    height: 10%;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    z-index: 6;
+    background-image: url('../Portfolio/img/conHill.png');
+    background-size: 100% 300px;
+    background-repeat: no-repeat;
+    border: 1px solid white;
+    box-shadow: 2px 2px #af9797;
+}
+h1{
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+    padding: 10px 60px;
+    font-size: 69px !important;
+    text-shadow: 2px 3px 3px #afa6a6;
+
+}
+.layer-1 {
+    top: -20px;
+    z-index: 5;
+    background-image: url('../../port/img/sky2.png');
+    background-size: 100% 480px;
+    background-repeat: no-repeat;
+}
+.layer-2 {
+    top: 177px;
+    z-index: 5;
+    background-image: url('../../port/img/back-mountains2.png');
+    background-size: 100% 300px;
+    background-repeat: no-repeat;
+}
+.layer-3 {
+    top: 320px;
+    z-index: 10;
+    background-image: url('../../port/img/middle-mountain2.png');
+    background-repeat: no-repeat;
+    background-size: 54% 300px;
+    left: 8vw;
+}
+.layer-4 {
+    top: 250px;
+    z-index: 15;
+    background-image: url('../../port/img/side-mountains2.png');
+    background-size: 100% 310px;
+    background-repeat: no-repeat;
+}
+.layer-5 {
+    top: 345px;
+    z-index: 20;
+    background-image: url('../../port/img/back-hills2.png');
+    background-size: 100% 200px;
+    background-repeat: no-repeat;
+    left: 0px;
+}
+.layer-6 {
+    top: 340px;
+    z-index: 25;
+    background-image: url('../../port/img/font-mountains2.png');
+    background-size: 100% 200px;
+    /* left: 5%; */
+    background-repeat: no-repeat;
+}
+
+
+.content {
+    position: absolute;
+    top: 100vh;
+    background: #415a6c;
+    width: 100%;
+    min-height: 1500px;
+}
+.content h1 {
     color: #fff;
     font-size: 2em;
     text-transform: uppercase;
     text-align: center;
-  }
+}
+body{
+    height: 100vw;
+    background: #6795d0;
+}
+
+/*# sourceMappingURL=custom.css.map */
