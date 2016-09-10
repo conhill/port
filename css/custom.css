@@ -111,7 +111,7 @@ top: 110px;
     position: relative;
     margin: 0 auto;
     z-index: 6;
-    background-image: url('../port/img/conHill.png');
+    background-image: url('../../port/img/conHill.png');
     background-size: 100% 300px;
     background-repeat: no-repeat;
     border: 1px solid white;
@@ -125,7 +125,7 @@ top: 110px;
   .layer-1 {
     top: -20px;
     z-index: 5;
-    background-image: url('../port/img/sky2.png');
+    background-image: url('../../port/img/sky2.png');
     background-size: 100% 480px;
     background-repeat: no-repeat;
   }
@@ -139,7 +139,7 @@ top: 110px;
   .layer-3 {
     top: 320px;
     z-index: 10;
-    background-image: url('port/img/middle-mountain2.png');
+    background-image: url('../../port/img/middle-mountain2.png');
     background-repeat: no-repeat;
     background-size: 54% 300px;
     left: 126px;
@@ -147,14 +147,14 @@ top: 110px;
   .layer-4 {
 top: 250px;
     z-index: 15;
-    background-image: url('/Portfolio/img/side-mountains2.png');
+    background-image: url('../../port/img/side-mountains2.png');
     background-size: 100% 310px;
     background-repeat: no-repeat;
   }
   .layer-5 {
     top: 345px;
     z-index: 20;
-    background-image: url('/Portfolio/img/back-hills2.png');
+    background-image: url('../../port/img/back-hills2.png');
     background-size: 100% 200px;
     background-repeat: no-repeat;
     left: 0px;
@@ -162,7 +162,7 @@ top: 250px;
   .layer-6 {
 top: 340px;
     z-index: 25;
-    background-image: url('/Portfolio/img/font-mountains2.png');
+    background-image: url('../../port/img/font-mountains2.png');
     background-size: 100% 200px;
     /* left: 5%; */
     background-repeat: no-repeat;
