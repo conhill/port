@@ -1,0 +1,146 @@
+@font-face {
+    font-family: Geometria;
+    src: url(../font/Geometria-Light.otf);
+}
+html{
+    background:black;
+}
+h1,h2,h3,h4,h5,h6{
+    text-transform: uppercase;
+}
+h1 {
+    font-family: Geometria;
+    display: inline;
+}
+
+.connor-n-left {
+    display: inline;
+}
+
+.connor-n-right {
+    display: inline;
+}
+
+#layer-0{
+    background: url('img/font-mountains.png');
+    width: inherit;
+}
+#layer-1{
+    background: url('img/back-hills.png');
+    width: inherit;
+}
+
+.p-box {
+    width: 100%;
+    height: 1080px;
+    position: fixed;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    pointer-events: none;
+}
+
+.flex-container {
+    padding: 20px;
+    margin: 20px;
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: baseline;
+    .flex-item {
+        background: lightsalmon;
+        padding: 5px;
+        width: 200px;
+        height: 150px;
+        margin: 10px;
+        line-height: 150px;
+        color: white;
+        font-weight: bold;
+        font-size: 2em;
+        text-align: center;
+        p {
+            font-size: 1.5rem;
+        }
+        h3 {
+            margin: -20px 0 0 0;
+            height: 40px;
+        }
+    }
+}
+
+body {
+  background: #415a6c;
+  margin: 0;
+  font-family: 'Oswald';
+}
+.parallax-container {
+  position: fixed;
+  overflow: visible;
+  width: 100%;
+  height: 850px;
+}
+.parallax-layer {
+  width: 100%;
+  height: 500px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-position: bottom center;
+  background-repeat: repeat-x;
+  background-size: 960px 253px;
+}
+  .layer-0 {
+    top: 0;
+    z-index: 5;
+    background: #dbf0ff url('http://i.imgur.com/4hwp8up.png') no-repeat top 40px center;
+    background-size: 120px 138.5px;
+  }
+  .layer-1 {
+    top: -100px;
+    z-index: 5;
+    background-image: url('http://i.imgur.com/Ra2bzmb.png');
+  }
+  .layer-2 {
+    top: -50px;
+    z-index: 10;
+    background-image: url('http://i.imgur.com/jSOo9SK.png');
+  }
+  .layer-3 {
+    top: -10px;
+    z-index: 15;
+    background-image: url('http://i.imgur.com/DOZRBDj.png');
+  }
+  .layer-4 {
+    top: 65px;
+    z-index: 20;
+    background-image: url('http://i.imgur.com/JbSR9JY.png');
+  }
+  .layer-5 {
+    top: 150px;
+    z-index: 25;
+    background-image: url('/img/font-mountains.png');
+  }
+
+  
+.content {
+  position: absolute;
+  top: 600px;
+  background: #415a6c;
+  width: 100%;
+  min-height: 1500px;
+}
+  .content h1 {
+    color: #fff;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: center;
+  }
