@@ -111,15 +111,18 @@ top: 110px;
     position: relative;
     margin: 0 auto;
     z-index: 6;
-    background-image: url('../../port/img/conHill.png');
+    background-image: url('../Portfolio/img/conHill.png');
     background-size: 100% 300px;
     background-repeat: no-repeat;
     border: 1px solid white;
+    box-shadow: 2px 2px #af9797;
   }
   h1{
     font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: white;
     padding: 10px 60px;
+    font-size: 69px !important;
+    text-shadow: 2px 3px 3px #afa6a6;
 
   }
   .layer-1 {
