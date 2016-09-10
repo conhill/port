@@ -125,21 +125,21 @@ top: 110px;
   .layer-1 {
     top: -20px;
     z-index: 5;
-    background-image: url('/Portfolio/img/sky2.png');
+    background-image: url('../Portfolio/img/sky2.png');
     background-size: 100% 480px;
     background-repeat: no-repeat;
   }
   .layer-2 {
     top: 177px;
     z-index: 5;
-    background-image: url('/Portfolio/img/back-mountains2.png');
+    background-image: url('../../Portfolio/img/back-mountains2.png');
     background-size: 100% 300px;
     background-repeat: no-repeat;
   }
   .layer-3 {
     top: 320px;
     z-index: 10;
-    background-image: url('/Portfolio/img/middle-mountain2.png');
+    background-image: url('Portfolio/img/middle-mountain2.png');
     background-repeat: no-repeat;
     background-size: 54% 300px;
     left: 126px;
