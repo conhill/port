@@ -90,8 +90,7 @@ body {
 .parallax-container {
   position: fixed;
   overflow: visible;
-  width: 100%;
-  height: 850px; }
+  width: 100%; }
 
 .parallax-container {
   background: #83a2d1; }
@@ -143,7 +142,7 @@ h1 {
 .layer-3 {
   top: 320px;
   z-index: 10;
-  background-image: url("../../port/img/middle-mountain2.png");
+  background-image: url("../../port/img/middle-mountain22.png");
   background-repeat: no-repeat;
   background-size: 54% 300px;
   left: 8vw; }
@@ -174,7 +173,7 @@ h1 {
 .content {
   position: absolute;
   top: 100vh;
-  background: #415a6c;
+  background: #00002b;
   width: 100%;
   min-height: 1500px; }
 
@@ -186,7 +185,35 @@ h1 {
 
 body {
   height: 100vw;
-  background: #6795d0; }
+  background: #00002b; }
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #353E43;
+  transition: all 0.25s ease-in-out;
+  height: 20px;
+  z-index: 20; }
+  #header.scrolled {
+    background-color: #DFE4E8; }
+    #header.scrolled .logo, #header.scrolled .nav-items li a {
+      color: black; }
+
+.logo {
+  float: left;
+  color: #FFF; }
+
+.nav-items {
+  float: right;
+  margin: 0 10px 0 0; }
+  .nav-items li {
+    display: inline-block;
+    padding: 0 5px; }
+    .nav-items li a {
+      color: #FFF; }
 
 /*# sourceMappingURL=custom.css.map */
 

@@ -9,14 +9,26 @@
 
 <body>
 <div>
+    <div id="header">
+        <div class="logo">Connor Hill</div>
+        <ul class="nav-items">
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+        </ul>
+    </div>
+    <!--<h1>CONNOR HILL</h1>
+    <h3>some kinda funny quote i cant think up yet</h3> -->
+
     <div class="parallax-container">
-        <div class="parallax-layer layer-0" data-parallax-speed="0.05" data-max-scroll="565"><h1>Connor Hill</h1></div>
-        <div class="parallax-layer layer-1" data-parallax-speed="0.1" data-max-scroll="565"></div>
-        <div class="parallax-layer layer-2" data-parallax-speed="0.2" data-max-scroll="565"></div>
-        <div class="parallax-layer layer-3" data-parallax-speed="0.3" data-max-scroll="565"></div>
-        <div class="parallax-layer layer-4" data-parallax-speed="0.5" data-max-scroll="565"></div>
-        <div class="parallax-layer layer-5" data-parallax-speed="0.7" data-max-scroll="565"></div>
-        <div class="parallax-layer layer-6" data-parallax-speed="0.9" data-max-scroll="565"></div>
+        <div class="parallax-layer layer-0" data-parallax-speed="0.05" data-max-scroll="800"><h1>Connor Hill</h1></div>
+        <div class="parallax-layer layer-1" data-parallax-speed="0.1" data-max-scroll="800"></div>
+        <div class="parallax-layer layer-2" data-parallax-speed="0.3" data-max-scroll="800"></div>
+        <div class="parallax-layer layer-3" data-parallax-speed="0.5" data-max-scroll="800"></div>
+        <div class="parallax-layer layer-4" data-parallax-speed="0.7" data-max-scroll="800"></div>
+        <div class="parallax-layer layer-5" data-parallax-speed="0.8" data-max-scroll="800"></div>
+        <div class="parallax-layer layer-6" data-parallax-speed="0.95" data-max-scroll="800"></div>
+
     </div>
 
     <div class="content">
@@ -46,8 +58,45 @@
 </div>
 <script src="../../port/js/parallax.js"></script>
 
+<script src="../../port/js/port.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+
 <script type="text/javascript">
-    var s = skrollr.init();
+    /**
+     * Created by Dnoop on 9/10/2016.
+     */
+    $(function () {
+        $(window).on('scroll', function () {
+            distanceFromTop = $(window).scrollTop();
+
+            if (distanceFromTop < 800)
+                $('#header').removeClass('scrolled');
+
+
+            if (distanceFromTop >= 800) {
+                $('#header').addClass('scrolled');
+                $('#header').css('background-color', '#DFE4E8').fadeIn(500);
+            }
+            else if (distanceFromTop < 800 && distanceFromTop >= 700)
+                $('#header').css('background-color', '#CACFD3').fadeIn(500);
+            else if (distanceFromTop < 700 && distanceFromTop >= 600)
+                $('#header').css('background-color', '#B5BBBF').fadeIn(500);
+            else if (distanceFromTop < 600 && distanceFromTop >= 500)
+                $('#header').css('background-color', '#9FA6AA').fadeIn(500);
+            else if (distanceFromTop < 500 && distanceFromTop >= 400)
+                $('#header').css('background-color', '#8A9196').fadeIn(500);
+            else if (distanceFromTop < 400 && distanceFromTop >= 300)
+                $('#header').css('background-color', '#757C81').fadeIn(500);
+            else if (distanceFromTop < 300 && distanceFromTop >= 200)
+                $('#header').css('background-color', '#60686C').fadeIn(500);
+            else if (distanceFromTop < 200 && distanceFromTop >= 100)
+                $('#header').css('background-color', '#4A5358').fadeIn(500);
+            else {
+                $('#header').removeClass('scrolled');
+                $('#header').css('background-color', '#353E43').fadeIn(500);
+            }
+        });
+    });
 </script>
 </body>
 
