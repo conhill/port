@@ -1,6 +1,6 @@
 @font-face {
   font-family: Geometria;
-  src: url(../../port/font/geometria.otf); }
+  src: url(../font/Geometria-Light.otf); }
 /* line 5, C:/Users/Dnoop/Desktop/Portfolio/css/custom.scss */
 html {
   background: black; }
@@ -9,91 +9,22 @@ html {
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase; }
 
-/* line 11, C:/Users/Dnoop/Desktop/Portfolio/css/custom.scss */
 h1 {
-  font-family: Geometria;
-  display: inline; }
+  display: inline;
+  font-family: 'Open Sans Condensed', sans-serif; }
 
-/* line 16, C:/Users/Dnoop/Desktop/Portfolio/css/custom.scss */
-.connor-n-left {
-  display: inline; }
+p {
+  font-family: 'Montserrat', sans-serif; }
 
-/* line 20, C:/Users/Dnoop/Desktop/Portfolio/css/custom.scss */
-.connor-n-right {
-  display: inline; }
-
-/* line 24, C:/Users/Dnoop/Desktop/Portfolio/css/custom.scss */
-#layer-0 {
-  background: url("img/font-mountains.png");
-  width: inherit; }
-
-/* line 28, C:/Users/Dnoop/Desktop/Portfolio/css/custom.scss */
-#layer-1 {
-  background: url("img/back-hills.png");
-  width: inherit; }
-
-/* line 33, C:/Users/Dnoop/Desktop/Portfolio/css/custom.scss */
-.p-box {
-  width: 100%;
-  height: 1080px;
-  position: fixed;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  pointer-events: none; }
-
-/* line 44, C:/Users/Dnoop/Desktop/Portfolio/css/custom.scss */
-.flex-container {
-  padding: 20px;
-  margin: 20px;
-  list-style: none;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  align-items: baseline; }
-
-/* line 59, C:/Users/Dnoop/Desktop/Portfolio/css/custom.scss */
-.flex-container .flex-item {
-  background: lightsalmon;
-  padding: 5px;
-  width: 225px;
-  height: 150px;
-  margin: 10px;
-  line-height: 150px;
-  color: white;
-  font-weight: bold;
-  font-size: 2em;
-  text-align: center; }
-
-/* line 70, C:/Users/Dnoop/Desktop/Portfolio/css/custom.scss */
-.flex-container .flex-item p {
-  font-size: 1.5rem; }
-
-/* line 73, C:/Users/Dnoop/Desktop/Portfolio/css/custom.scss */
-.flex-container .flex-item h3 {
-  height: 45px; }
-
-/* line 80, C:/Users/Dnoop/Desktop/Portfolio/css/custom.scss */
 body {
   background: #415a6c;
-  margin: 0;
-  font-family: 'Oswald'; }
+  margin: 0; }
 
 .parallax-container {
   position: fixed;
   overflow: visible;
-  width: 100%; }
-
-.parallax-container {
-  background: #83a2d1; }
+  width: 100%;
+  height: 850px; }
 
 .parallax-layer {
   width: 100%;
@@ -177,6 +108,13 @@ h1 {
   width: 100%;
   min-height: 1900px; }
 
+.content {
+  position: absolute;
+  top: 850px;
+  background: #00002b;
+  width: 100%;
+  min-height: 1500px; }
+
 .content h1 {
   color: #fff;
   font-size: 2em;
@@ -214,6 +152,137 @@ body {
     padding: 0 5px; }
     .nav-items li a {
       color: #FFF; }
+
+.larger-modal {
+  height: 25vw;
+  max-height: 400px;
+  width: 90vw;
+  overflow: hidden;
+  margin: 20px auto;
+  position: relative; }
+
+.about {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  transition: all .2s ease-in-out;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+  background: white url("/Portfolio/img/me.jpg");
+  background-size: 200px 200px;
+  cursor: pointer; }
+
+.about.expand {
+  border-radius: 50%;
+  transform: scale(14);
+  background: white;
+  transition: all .2s ease-in-out;
+  position: absolute; }
+
+.test-table {
+  display: table-row;
+  max-height: 400px;
+  height: 20vw; }
+
+.img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  top: 100px;
+  position: relative;
+  left: 50px; }
+
+.img-holder {
+  transition: all .05s ease-out;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  width: 200px;
+  opacity: 0; }
+  .img-holder img {
+    top: 60px;
+    position: relative;
+    left: 15px;
+    border-radius: 50%;
+    border: 2px solid black;
+    padding: 6px; }
+
+.img-holder.expand {
+  transition: all .4s ease-in-out;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  width: 30vw;
+  opacity: 1;
+  display: table-cell;
+  height: 25vw;
+  max-height: 400px; }
+  .img-holder.expand img {
+    top: 2vw;
+    position: relative;
+    left: 15px;
+    border-radius: 50%;
+    border: 2px solid black;
+    padding: 6px;
+    width: 20vw;
+    height: 20vw;
+    max-width: 250px;
+    max-height: 250px; }
+
+.about-title {
+  font-size: 48px;
+  width: 145px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 65px;
+  text-align: center;
+  line-height: 39px; }
+
+.about.expand.highlight {
+  background: white; }
+
+.about.highlight {
+  background: white; }
+
+.about-title.expand {
+  display: none; }
+
+.about-inner {
+  display: none; }
+
+.about-inner.expand {
+  color: black;
+  font-size: 2vw;
+  z-index: 20;
+  width: 70vw;
+  height: 25vw;
+  max-height: 400px;
+  position: relative;
+  vertical-align: middle;
+  display: table-cell;
+  padding: 0; }
+
+.exit-about.expand {
+  font-size: 32px;
+  height: 50px;
+  position: relative;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  display: table-cell;
+  width: 5vw;
+  vertical-align: top; }
+
+.exit-about {
+  display: none; }
+
+.about-section {
+  margin: 50px 0; }
+  .about-section h1 {
+    display: block;
+    margin: 0 auto;
+    width: 400px; }
 
 /*# sourceMappingURL=custom.css.map */
 
