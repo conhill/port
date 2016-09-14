@@ -53,7 +53,6 @@ h1 {
   color: white;
   padding: 10px 60px;
   font-size: 69px !important;
-  text-shadow: 2px 3px 3px #afa6a6;
   font-weight: 700; }
 
 .layer-1 {
@@ -169,7 +168,7 @@ body {
   display: block;
   margin: 0 auto;
   overflow: hidden;
-  background: white url("/Portfolio/img/me.jpg");
+  background: white url("../../port/img/me.jpg");
   background-size: 200px 200px;
   cursor: pointer; }
 
@@ -201,12 +200,16 @@ body {
   width: 200px;
   opacity: 0; }
   .img-holder img {
-    top: 60px;
+    top: -165px;
     position: relative;
     left: 15px;
     border-radius: 50%;
     border: 2px solid black;
-    padding: 6px; }
+    padding: 6px;
+    width: 20vw;
+    height: 20vw;
+    max-width: 250px;
+    max-height: 250px; }
 
 .img-holder.expand {
   transition: all .4s ease-in-out;
