@@ -2,62 +2,119 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="../../port/css/custom.css">
-    <link rel="stylesheet" href="../../port/css/Skeleton-2.0.4/css/skeleton.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/Skeleton-Sass-master/scss/skeleton.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans+Condensed:300" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 
 <body>
-<div>
-    <div id="header">
-        <div class="logo">Connor Hill</div>
-        <ul class="nav-items">
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-        </ul>
-    </div>
-    <!--<h1>CONNOR HILL</h1>
-    <h3>some kinda funny quote i cant think up yet</h3> -->
+<section>
+    <container>
+        <row>
+            <div id="header">
+                <div class="logo">Connor Hill</div>
+                <ul class="nav-items">
+                    <li><a href="https://www.linkedin.com/in/connor-hill-b03b3055">LinkedIn</a></li>
+                    <li><a href="https://github.com/conhill/">Github</a></li>
+                    <li><a href="https://codepen.io/Dnoop/">Codepen</a></li>
+                </ul>
+            </div>
+            <!--<h1>CONNOR HILL</h1>
+            <h3>some kinda funny quote i cant think up yet</h3> -->
 
-    <div class="parallax-container">
-        <div class="parallax-layer layer-0" data-parallax-speed="0.05" data-max-scroll="800"><h1>Connor Hill</h1></div>
-        <div class="parallax-layer layer-1" data-parallax-speed="0.1" data-max-scroll="800"></div>
-        <div class="parallax-layer layer-2" data-parallax-speed="0.3" data-max-scroll="800"></div>
-        <div class="parallax-layer layer-3" data-parallax-speed="0.5" data-max-scroll="800"></div>
-        <div class="parallax-layer layer-4" data-parallax-speed="0.7" data-max-scroll="800"></div>
-        <div class="parallax-layer layer-5" data-parallax-speed="0.8" data-max-scroll="800"></div>
-        <div class="parallax-layer layer-6" data-parallax-speed="0.95" data-max-scroll="800"></div>
+            <div class="parallax-container">
+                <div class="parallax-layer layer-0" data-parallax-speed="0.05" data-max-scroll="800"><h1>Connor Hill</h1></div>
+                <div class="parallax-layer layer-1" data-parallax-speed="0.1" data-max-scroll="800"></div>
+                <div class="parallax-layer layer-2" data-parallax-speed="0.3" data-max-scroll="800"></div>
+                <div class="parallax-layer layer-3" data-parallax-speed="0.5" data-max-scroll="800"></div>
+                <div class="parallax-layer layer-4" data-parallax-speed="0.7" data-max-scroll="800"></div>
+                <div class="parallax-layer layer-5" data-parallax-speed="0.8" data-max-scroll="800"></div>
+                <div class="parallax-layer layer-6" data-parallax-speed="0.95" data-max-scroll="800"></div>
 
-    </div>
+            </div>
+        </row>
+    </container>
+
 
     <div class="content">
-        <div class="about-section">
-            <h1>About Me</h1>
-            <div class="larger-modal">
-
-                <div onclick="expand('about')" id="about" class="about"></div>
-                <div class="test-table">
-                    <div onclick="expand('about')" class="img-holder" id="img-holder">
-                        <img src="../../port/img/me.jpg" alt="image description">
-                    </div>
-                    <p id="about-inner" class="about-inner">
-                        I am a Front-End Developer out of New York.
-                        SUNY New Paltz graduate in Computer Science with a minor in <span class="minerals">Geology</span>.
-                        Originally self taught PHP, HTML and CSS and
-                        honed my skills over the past 3 years working for multiple companies.</p>
-                    <div onclick="expand('about')" id="exit-about" class="exit-about">X</div>
+        <div class="six columns work-experience">
+            <div class="job-container">
+                <h2>WORK EXPERIENCE</h2>
+                <div class="job">
+                    <h3>Digital Associates</h3>
+                    <h4>Lead Front-End Developer</h4>
+                    <p>(Smithtown, New York)</p>
                 </div>
-                <!--<div id="about-title" class="title">About Me</div>-->
+                <div class="job">
+                    <h3>W.W. Norton</h3>
+                    <h4>Interactive Design Intern</h4>
+                    <p>(500 Fifth Avenue, New York)</p>
+                </div>
+                <div class="job">
+                    <h3>KDA Web Technologies Inc.</h3>
+                    <h4>Senior Assistant Developer</h4>
+                    <p>(New Paltz, New York)</p>
+                </div>
             </div>
-
         </div>
+        <div class="six columns about">
+            <div class="about-container">
+                <h2>ABOUT ME</h2>
+                <p> I am a Front-End Developer out of New York.</p>
+                <p>SUNY New Paltz graduate in Computer Science with a minor in <span class="minerals">Geology</span>.</p>
+                <p> Originally self taught PHP, HTML and CSS and honed my skills with various frameworks and technologies over the past 3 years working for multiple companies.</p>
+            </div>
+        </div>
+        <div class="twelve columns technologies">
+            <div class="skills-container">
+                <h2>Skills</h2>
+                <div class="skills">
+                    <h4>Front-End Development</h4>
+                    <p>HTML5, CSS3, Angular, JQuery, JQuery Mobile</p>
+                </div>
+                <div class="skills">
+                    <h4>Languages</h4>
+                    <p>Javascript, PHP, Java, C++</p>
+                </div>
+                <div class="skills">
+                    <h4>Databases/Servers</h4>
+                    <p>SQL (MySQL). Apache, Node</p>
+                </div>
+                <div class="skills">
+                    <h4>Frameworks/Version Control</h4>
+                    <p>Bootstrap, Skeleton. Github, Git, BitBucket</p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="twelve columns social">
+                <div class="six columns social2">
+                    <div class="social-container">
+                        <ul class="social-ul">
+                            <li class="twitter"><a href="https://twitter.com/realConnorHill"></a></li>
+                            <li class="linkedin"><a href="https://www.linkedin.com/in/connor-hill-b03b3055"></a></li>
+                            <li class="instagram"><a href="https://www.instagram.com/thecon_man/"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="six columns contact">
+                    <div class="contact-container">
+                        <h3>Email</h3>
+                        <p>conhill@optonline.net</p>
+                        <h4>Telephone</h4>
+                        <p>(631) 987 7500</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
-</div>
-<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-<script src="../../port/js/parallax.js"></script>
-<script src="../../port/js/port.js"></script>
 
+</section>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script src="/Portfolio/js/parallax.js"></script>
 <script type="text/javascript">
     /**
      * Created by Dnoop on 9/10/2016.
@@ -94,6 +151,8 @@
             }
         });
     });
+
+
 </script>
 </body>
 
