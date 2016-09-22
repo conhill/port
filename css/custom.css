@@ -103,16 +103,9 @@ h1 {
 .content {
   position: absolute;
   top: 850px;
-  background: #00002b;
+  background: #00183e;
   width: 100%;
-  min-height: 1900px; }
-
-.content {
-  position: absolute;
-  top: 850px;
-  background: #00002b;
-  width: 100%;
-  min-height: 1500px; }
+  min-height: 1000px; }
 
 .content h1 {
   color: #fff;

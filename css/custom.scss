@@ -122,17 +122,11 @@ h1 {
 .content {
     position: absolute;
     top: 850px;
-    background: #00002b;
+    background: #00183e;
+    //#00183e
+    //00002b
     width: 100%;
-    min-height: 1900px;
-}
-
-.content {
-    position: absolute;
-    top: 850px;
-    background: #00002b;
-    width: 100%;
-    min-height: 1500px;
+    min-height: 1000px;
 }
 
 .content h1 {
@@ -141,6 +135,7 @@ h1 {
     text-transform: uppercase;
     text-align: center;
 }
+
 
 body {
     height: 100vw;
