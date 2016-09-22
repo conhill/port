@@ -3,9 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="55030f8f-a877-4c90-bb95-504b23bb5925" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/custom.css" afterPath="$PROJECT_DIR$/css/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/custom.css.map" afterPath="$PROJECT_DIR$/css/custom.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/custom.scss" afterPath="$PROJECT_DIR$/css/custom.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/Skeleton-2.0.4/css/normalize.css" afterPath="$PROJECT_DIR$/css/Skeleton-2.0.4/css/normalize.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/Skeleton-2.0.4/css/skeleton.css" afterPath="$PROJECT_DIR$/css/Skeleton-2.0.4/css/skeleton.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/Skeleton-2.0.4/index.html" afterPath="$PROJECT_DIR$/css/Skeleton-2.0.4/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/Skeleton-Sass-master/.editorconfig" afterPath="$PROJECT_DIR$/css/Skeleton-Sass-master/.editorconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/Skeleton-Sass-master/.gitignore" afterPath="$PROJECT_DIR$/css/Skeleton-Sass-master/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/Skeleton-Sass-master/Gruntfile.js" afterPath="$PROJECT_DIR$/css/Skeleton-Sass-master/Gruntfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/Skeleton-Sass-master/README.md" afterPath="$PROJECT_DIR$/css/Skeleton-Sass-master/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/Skeleton-Sass-master/bower.json" afterPath="$PROJECT_DIR$/css/Skeleton-Sass-master/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/Skeleton-Sass-master/index.html" afterPath="$PROJECT_DIR$/css/Skeleton-Sass-master/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/Skeleton-Sass-master/package.json" afterPath="$PROJECT_DIR$/css/Skeleton-Sass-master/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/Skeleton-Sass-master/scss/skeleton.scss" afterPath="$PROJECT_DIR$/css/Skeleton-Sass-master/scss/skeleton.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="port.iws" />
@@ -32,11 +40,9 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="695">
-              <caret line="158" column="7" selection-start-line="158" selection-start-column="7" selection-end-line="158" selection-end-column="7" />
-              <folding>
-                <element signature="e#5246#5295#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="340">
+              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -320,12 +326,12 @@
       <workItem from="1473484422261" duration="6909000" />
       <workItem from="1473895416609" duration="3920000" />
       <workItem from="1474137002382" duration="1845000" />
-      <workItem from="1474504325499" duration="184000" />
+      <workItem from="1474504325499" duration="386000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12858000" />
+    <option name="totallyTimeSpent" value="13060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="916" extended-state="6" />
@@ -363,9 +369,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
           <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="45" />
-          <folding>
-            <element signature="e#5246#5295#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -408,9 +412,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
           <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="45" />
-          <folding>
-            <element signature="e#5246#5295#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -453,9 +455,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
           <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
-          <folding>
-            <element signature="e#5246#5295#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -538,11 +538,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="695">
-          <caret line="158" column="7" selection-start-line="158" selection-start-column="7" selection-end-line="158" selection-end-column="7" />
-          <folding>
-            <element signature="e#5246#5295#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="340">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
