@@ -1,11 +1,16 @@
 @font-face {
-  font-family: Geometria;
-  src: url(../font/Geometria-Light.otf); }
-/* line 5, C:/Users/Dnoop/Desktop/Portfolio/css/custom.scss */
+  font-family: AurulentSans;
+  src: url(../font/AurulentSans-Regular.otf); }
+@font-face {
+  font-family: AurulentSans-Bold;
+  src: url(../font/AurulentSans-Bold.otf); }
 html {
   background: black; }
 
-/* line 8, C:/Users/Dnoop/Desktop/Portfolio/css/custom.scss */
+li a {
+  text-decoration: none;
+  font-family: AurulentSans; }
+
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase; }
 
