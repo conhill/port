@@ -211,7 +211,7 @@ body {
     list-style: none; }
 
 .social {
-  background: #7f8c8d; }
+  background: #dfe4e8; }
   .social h3 {
     font-family: AurulentSans-Bold;
     font-size: 28px;
@@ -225,7 +225,7 @@ body {
     color: #34495e; }
   .social p {
     font-family: AurulentSans;
-    color: white; }
+    color: black; }
 
 .twitter {
   background: url("../../port/img/Twitter.png");
