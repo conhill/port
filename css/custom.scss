@@ -14,15 +14,14 @@ html {
 
 li {
     a {
-        text-decoration: none;
-        font-family: AurulentSans;
+	text-decoration: none;
+	font-family: AurulentSans;
     }
 }
 
 h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
 }
-
 
 h1 {
     //font-family: Geometria;
@@ -52,27 +51,27 @@ body {
     z-index: 61;
     overflow: hidden;
     h1 {
-        animation: color-me-in 4s;
-        margin: 0 auto;
-        display: block;
-        width: 300px;
-        top: 35vh;
-        left: 38vw;
-        position: absolute;
-        border: 0;
-        font-size: 8vw !important;
-        box-shadow: none;
+	animation: color-me-in 4s;
+	margin: 0 auto;
+	display: block;
+	width: 300px;
+	top: 35vh;
+	left: 38vw;
+	position: absolute;
+	border: 0;
+	font-size: 8vw !important;
+	box-shadow: none;
     }
 }
 
 @keyframes color-me-in {
     /* You could think of as "step 1" */
     0% {
-        color: #252a60;
+	color: #252a60;
     }
     /* You could think of as "step 2" */
     100% {
-        color: white;
+	color: white;
     }
 }
 
@@ -103,16 +102,14 @@ body {
 
 .parallax-layer.layer-0 {
     top: 110px;
-    width: 510px;
     height: 10%;
+    width: 510px;
     display: block;
     position: relative;
     margin: 0 auto;
     z-index: 6;
     background-size: 100% 300px;
     background-repeat: no-repeat;
-    //border: 1px solid white;
-    //box-shadow: 2px 2px #af9797;
 }
 
 h1 {
@@ -193,7 +190,6 @@ h1 {
     text-align: center;
 }
 
-
 body {
     height: 100vw;
     background: #00002b;
@@ -211,10 +207,10 @@ body {
     z-index: 20;
 
     &.scrolled {
-        background-color: #DFE4E8;
-        .logo, .nav-items li a {
-            color: black;
-        }
+	background-color: #DFE4E8;
+	.logo, .nav-items li a {
+	    color: black;
+	}
     }
 }
 
@@ -229,70 +225,70 @@ body {
     margin: 0 10px 0 0;
 
     li {
-        display: inline-block;
-        padding: 0 5px;
+	display: inline-block;
+	padding: 0 5px;
 
-        a {
-            color: #FFF;
-        }
+	a {
+	    color: #FFF;
+	}
     }
 }
 
 .work-experience, .about {
     .job-container, .about-container {
-        width: 425px;
-        display: block;
-        margin: 60px auto;
+	width: 425px;
+	display: block;
+	margin: 60px auto;
     }
     h2 {
-        color: white;
-        font-family: AurulentSans-Bold;
-        font-size: 24px;
+	color: white;
+	font-family: AurulentSans-Bold;
+	font-size: 24px;
     }
     .job {
-        h3 {
-            color: #e74c3c;
-            font-family: AurulentSans-Bold;
-            font-size: 28px;
-            margin-bottom: 6px;
-        }
-        h4 {
-            font-family: AurulentSans;
-            font-size: 18px;
-            color: white;
-            margin-bottom: 6px;
-        }
-        p {
-            font-family: AurulentSans;
-            color: white;
-        }
+	h3 {
+	    color: #e74c3c;
+	    font-family: AurulentSans-Bold;
+	    font-size: 28px;
+	    margin-bottom: 6px;
+	}
+	h4 {
+	    font-family: AurulentSans;
+	    font-size: 18px;
+	    color: white;
+	    margin-bottom: 6px;
+	}
+	p {
+	    font-family: AurulentSans;
+	    color: white;
+	}
     }
 }
 
 .technologies {
     .skills-container {
-        display: block;
-        margin: 60px auto;
-        h2 {
-            color: white;
-            font-family: AurulentSans-Bold;
-            font-size: 24px;
-            text-align: center;
-        }
-        .skills {
-            text-align: center;
-            h4 {
-                font-family: AurulentSans-Bold;
-                font-size: 28px;
-                color: white;
-                margin-bottom: 6px;
-                color: #f1c40f;
-            }
-            p {
-                font-family: AurulentSans;
-                color: white;
-            }
-        }
+	display: block;
+	margin: 60px auto;
+	h2 {
+	    color: white;
+	    font-family: AurulentSans-Bold;
+	    font-size: 24px;
+	    text-align: center;
+	}
+	.skills {
+	    text-align: center;
+	    h4 {
+		font-family: AurulentSans-Bold;
+		font-size: 28px;
+		color: white;
+		margin-bottom: 6px;
+		color: #f1c40f;
+	    }
+	    p {
+		font-family: AurulentSans;
+		color: white;
+	    }
+	}
     }
 }
 
@@ -304,33 +300,33 @@ body {
     line-height: 100px;
     margin: 0 !important;
     li {
-        width: 50px;
-        height: 50px;
-        display: inline-block;
-        vertical-align: middle;
-        margin: 10px 10px 10px 0;
-        list-style: none;
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 10px 10px 10px 0;
+	list-style: none;
     }
 }
 
 .social {
     background: rgb(223, 228, 232);
     h3 {
-        font-family: AurulentSans-Bold;
-        font-size: 28px;
-        margin-bottom: 6px;
-        color: #34495e;
-        margin-top: 10px;
+	font-family: AurulentSans-Bold;
+	font-size: 28px;
+	margin-bottom: 6px;
+	color: #34495e;
+	margin-top: 10px;
     }
     h4 {
-        font-family: AurulentSans-Bold;
-        font-size: 28px;
-        margin-bottom: 6px;
-        color: #34495e;
+	font-family: AurulentSans-Bold;
+	font-size: 28px;
+	margin-bottom: 6px;
+	color: #34495e;
     }
     p {
-        font-family: AurulentSans;
-        color: black;
+	font-family: AurulentSans;
+	color: black;
     }
 }
 
@@ -357,8 +353,8 @@ body {
 
 .about-container {
     p {
-        color: white;
-        font-family: AurulentSans;
+	color: white;
+	font-family: AurulentSans;
     }
 }
 
