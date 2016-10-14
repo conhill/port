@@ -8,30 +8,29 @@
 </head>
 
 <body>
-<section>
-    <container>
-        <row>
-            <div id="header">
-                <div class="logo">Connor Hill</div>
-                <ul class="nav-items">
-                    <li><a href="https://www.linkedin.com/in/connor-hill-b03b3055">LinkedIn</a></li>
-                    <li><a href="https://github.com/conhill/">Github</a></li>
-                    <li><a href="https://codepen.io/Dnoop/">Codepen</a></li>
-                </ul>
-            </div>
+<div class="loader">
+    <h1>HILL</h1>
+</div>
+<div class="wrapper">
+    <div id="header">
+        <div class="logo">Connor Hill</div>
+        <ul class="nav-items">
+            <li><a href="https://www.linkedin.com/in/connor-hill-b03b3055">LinkedIn</a></li>
+            <li><a href="https://github.com/conhill/">Github</a></li>
+            <li><a href="https://codepen.io/Dnoop/">Codepen</a></li>
+        </ul>
+    </div>
 
-            <div class="parallax-container">
-                <div class="parallax-layer layer-0" data-parallax-speed="0.05" data-max-scroll="1500"><h1>Connor Hill</h1></div>
-                <div class="parallax-layer layer-1" data-parallax-speed="0.1" data-max-scroll="1500"></div>
-                <div class="parallax-layer layer-2" data-parallax-speed="0.3" data-max-scroll="1500"></div>
-                <div class="parallax-layer layer-3" data-parallax-speed="0.5" data-max-scroll="1500"></div>
-                <div class="parallax-layer layer-4" data-parallax-speed="0.55" data-max-scroll="1500"></div>
-                <div class="parallax-layer layer-5" data-parallax-speed="0.8" data-max-scroll="1500"></div>
-                <div class="parallax-layer layer-6" data-parallax-speed="0.95" data-max-scroll="1500"></div>
+    <div class="parallax-container">
+        <div class="parallax-layer layer-0" data-parallax-speed="0.05" data-max-scroll="1500"><h1>Connor Hill</h1></div>
+        <div class="parallax-layer layer-1" data-parallax-speed="0.1" data-max-scroll="1500"></div>
+        <div class="parallax-layer layer-2" data-parallax-speed="0.3" data-max-scroll="1500"></div>
+        <div class="parallax-layer layer-3" data-parallax-speed="0.5" data-max-scroll="1500"></div>
+        <div class="parallax-layer layer-4" data-parallax-speed="0.55" data-max-scroll="1500"></div>
+        <div class="parallax-layer layer-5" data-parallax-speed="0.8" data-max-scroll="1500"></div>
+        <div class="parallax-layer layer-6" data-parallax-speed="0.95" data-max-scroll="1500"></div>
 
-            </div>
-        </row>
-    </container>
+    </div>
 
 
     <div class="content">
@@ -106,8 +105,7 @@
             </div>
         </footer>
     </div>
-
-</section>
+</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
 <script src="../../port/js/parallax.js"></script>
@@ -116,6 +114,13 @@
     /**
      * Created by Dnoop on 9/10/2016.
      */
+    $(document).ready(function () {
+        setTimeout(function() {
+            $('body').addClass('loaded');
+            $(".loader").addClass("loaded");
+        }, 1500);
+    });
+
     $(function () {
         $(window).on('scroll', function () {
             distanceFromTop = $(window).scrollTop();
@@ -128,9 +133,9 @@
                 $('#header').addClass('scrolled');
                 $('#header').css('background-color', '#DFE4E8').fadeIn(500);
             }
-            else if (distanceFromTop < 800 && distanceFromTop >= 700)
+            else if (distanceFromTop < 1000 && distanceFromTop >= 850)
                 $('#header').css('background-color', '#CACFD3').fadeIn(500);
-            else if (distanceFromTop < 700 && distanceFromTop >= 600)
+            else if (distanceFromTop < 850 && distanceFromTop >= 600)
                 $('#header').css('background-color', '#B5BBBF').fadeIn(500);
             else if (distanceFromTop < 600 && distanceFromTop >= 500)
                 $('#header').css('background-color', '#9FA6AA').fadeIn(500);
