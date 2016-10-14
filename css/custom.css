@@ -87,13 +87,10 @@ body {
   background-repeat: no-repeat; }
 
 h1 {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
+  padding: 10px 60px;
   font-size: 69px !important;
-  font-weight: 700;
-  margin: 0 auto;
-  text-align: center;
-  width: 100%;
-  display: inline-block;
   border: 1px solid white;
   box-shadow: 2px 2px #af9797; }
 
