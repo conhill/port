@@ -234,7 +234,7 @@ body {
   height: 200px; }
 
 .social-ul {
-  line-height: 200px;
+  line-height: 100px;
   margin: 0 !important; }
   .social-ul li {
     width: 50px;
