@@ -80,6 +80,7 @@ body {
   height: 10%;
   width: 510px;
   min-width: 510px;
+  max-width: 510px;
   display: block;
   position: relative;
   margin: 0 auto;
