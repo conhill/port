@@ -102,13 +102,13 @@ body {
 
 .parallax-layer.layer-0 {
     top: 110px;
+    width: 500px;
     height: 10%;
-    float: right;
-    clear: both;
-    right: -33%;
+    display: block;
     position: relative;
     margin: 0 auto;
     z-index: 6;
+    //background-image: url('../Portfolio/img/conHill.png');
     background-size: 100% 300px;
     background-repeat: no-repeat;
 }

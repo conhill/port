@@ -77,10 +77,9 @@ body {
 
 .parallax-layer.layer-0 {
   top: 110px;
+  width: 500px;
   height: 10%;
-  float: right;
-  clear: both;
-  right: -33%;
+  display: block;
   position: relative;
   margin: 0 auto;
   z-index: 6;
