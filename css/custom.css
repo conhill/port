@@ -59,6 +59,10 @@ body {
 .loader.loaded {
   height: 0px; }
 
+.loader.mobile-loaded {
+  transition: height 0s;
+  height: 0px; }
+
 .parallax-container {
   position: fixed;
   overflow: visible;
