@@ -292,7 +292,35 @@ body {
 
   .about-container {
     width: 92% !important;
-    padding: 0 15px; } }
+    padding: 0 15px; }
+
+  .layer-0 {
+    left: 0 !important; }
+    .layer-0 h1 {
+      padding: 10px 20px !important; }
+
+  .layer-2 {
+    background-size: 100% 300px;
+    top: 300px; }
+
+  .layer-3 {
+    background-size: 100% 300px;
+    top: 430px; }
+
+  .layer-4 {
+    background-size: 100% 300px;
+    top: 390px; }
+
+  .layer-5 {
+    background-size: 100% 200px;
+    top: 590px; }
+
+  .layer-6 {
+    background-size: 100% 300px;
+    top: 590px; }
+
+  .content {
+    top: 1000px; } }
 @media (max-width: 600px) {
   .nav-items li {
     font-size: 12px; }
