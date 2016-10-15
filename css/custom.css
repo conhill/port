@@ -76,14 +76,13 @@ body {
   background-size: 960px 253px; }
 
 .parallax-layer.layer-0 {
-  top: 110px;
+  top: 20vh;
   width: 500px;
   height: 10%;
   display: block;
-  position: relative;
   margin: 0 auto;
   z-index: 6;
-  background-size: 100% 300px;
+  background-size: 100% 35vh;
   background-repeat: no-repeat; }
 
 h1 {
@@ -95,47 +94,46 @@ h1 {
   box-shadow: 2px 2px #af9797; }
 
 .layer-1 {
-  top: -30px;
   z-index: 5;
   background-repeat: no-repeat;
   background: linear-gradient(#75a5db, #d0ceda);
   height: 600px; }
 
 .layer-2 {
-  top: 287px;
+  top: 28vh;
   z-index: 5;
   background-image: url("../../port/img/fw-back-mountains.png");
-  background-size: 100% 340px;
+  background-size: 100% 35vh;
   background-repeat: no-repeat; }
 
 .layer-3 {
-  top: 405px;
+  top: 44vh;
   z-index: 10;
   background-image: url("../../port/img/middle-mountain22.png");
   background-repeat: no-repeat;
-  background-size: 54% 300px;
+  background-size: 100% 35vh;
   left: 6vw; }
 
 .layer-4 {
-  top: 350px;
+  top: 34vh;
   z-index: 15;
   background-image: url("../../port/img/fw-side-mountains.png");
-  background-size: 100% 310px;
+  background-size: 100% 36vh;
   background-repeat: no-repeat; }
 
 .layer-5 {
-  top: 527px;
+  top: 47vh;
   z-index: 20;
   background-image: url("../../port/img/fw-back-hills.png");
-  background-size: 100% 300px;
+  background-size: 100% 25vh;
   background-repeat: no-repeat;
   left: 0px; }
 
 .layer-6 {
-  top: 520px;
+  top: 57vh;
   z-index: 25;
   background-image: url("../../port/img/fw-font-mountains.png");
-  background-size: 100% 290px;
+  background-size: 100% 34vh;
   /* left: 5%; */
   background-repeat: no-repeat; }
 
@@ -284,5 +282,57 @@ body {
   width: 425px;
   display: block;
   margin: 0 auto; }
+
+@media (min-width: 601px) and (max-width: 910px) {
+  .job-container {
+    width: 100% !important;
+    padding: 0 15px; }
+
+  .about-container {
+    width: 92% !important;
+    padding: 0 15px; } }
+@media (max-width: 600px) {
+  .nav-items li {
+    font-size: 12px; }
+
+  .parallax-layer.layer-0 {
+    width: 100%;
+    text-align: center; }
+    .parallax-layer.layer-0 h1 {
+      font-size: 50px !important;
+      padding: 0; }
+
+  .job-container, .work-experience {
+    width: 100% !important;
+    padding: 10px; }
+
+  .about-container, .skills-container {
+    width: 95% !important; }
+
+  .skills h4 {
+    font-size: 22px !important; }
+
+  .layer-0 {
+    left: 0 !important; }
+    .layer-0 h1 {
+      padding: 10px 20px !important; }
+
+  .layer-1 {
+    height: 400px; }
+
+  .layer-2 {
+    top: 0px; }
+
+  .layer-3 {
+    top: 90px; }
+
+  .layer-4 {
+    top: 45px; }
+
+  .layer-5 {
+    top: 170px; }
+
+  .layer-6 {
+    top: 160px; } }
 
 /*# sourceMappingURL=custom.css.map */
