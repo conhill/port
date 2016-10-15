@@ -103,10 +103,11 @@ body {
 .parallax-layer.layer-0 {
     //top: 110px;
     top: 20vh;
+    left: 33%;
     width: 500px;
     height: 10%;
     display: block;
-   // position: relative;
+    // position: relative;
     margin: 0 auto;
     z-index: 6;
     //background-image: url('../Portfolio/img/conHill.png');
@@ -150,12 +151,12 @@ h1 {
     background-image: url('../../port/img/middle-mountain22.png');
     background-repeat: no-repeat;
     //background-size: 54% 300px;
-    background-size: 100% 35vh;
+    background-size: 54% 35vh;
     left: 6vw;
 }
 
 .layer-4 {
-   // top: 350px;
+    // top: 350px;
     top: 34vh;
     z-index: 15;
     background-image: url('../../port/img/fw-side-mountains.png');
@@ -166,18 +167,18 @@ h1 {
 
 .layer-5 {
     //top: 527px;
-    top: 47vh;
+    top: 51vh;
     z-index: 20;
     background-image: url('../../port/img/fw-back-hills.png');
     //background-size: 100% 300px;
-    background-size: 100% 25vh;
+    background-size: 100% 30vh;
     background-repeat: no-repeat;
     left: 0px;
 }
 
 .layer-6 {
     //top: 520px;
-    top: 57vh;
+    top: 53vh;
     z-index: 25;
     background-image: url('../../port/img/fw-font-mountains.png');
     //background-size: 100% 290px;
@@ -188,12 +189,13 @@ h1 {
 
 .content {
     position: absolute;
-    top: 1000px;
+    top: 100vh;
     background: #00002c;
     //#00183e
     //00002b
     width: 100%;
     min-height: 1000px;
+    z-index: 1000;
 }
 
 .content h1 {
@@ -376,7 +378,6 @@ body {
     display: block;
     margin: 0 auto;
 }
-
 
 @media (min-width: 601px) and (max-width: 910px) {
     .job-container {

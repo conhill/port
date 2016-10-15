@@ -77,6 +77,7 @@ body {
 
 .parallax-layer.layer-0 {
   top: 20vh;
+  left: 33%;
   width: 500px;
   height: 10%;
   display: block;
@@ -111,7 +112,7 @@ h1 {
   z-index: 10;
   background-image: url("../../port/img/middle-mountain22.png");
   background-repeat: no-repeat;
-  background-size: 100% 35vh;
+  background-size: 54% 35vh;
   left: 6vw; }
 
 .layer-4 {
@@ -122,15 +123,15 @@ h1 {
   background-repeat: no-repeat; }
 
 .layer-5 {
-  top: 47vh;
+  top: 51vh;
   z-index: 20;
   background-image: url("../../port/img/fw-back-hills.png");
-  background-size: 100% 25vh;
+  background-size: 100% 30vh;
   background-repeat: no-repeat;
   left: 0px; }
 
 .layer-6 {
-  top: 57vh;
+  top: 53vh;
   z-index: 25;
   background-image: url("../../port/img/fw-font-mountains.png");
   background-size: 100% 34vh;
@@ -139,10 +140,11 @@ h1 {
 
 .content {
   position: absolute;
-  top: 1000px;
+  top: 100vh;
   background: #00002c;
   width: 100%;
-  min-height: 1000px; }
+  min-height: 1000px;
+  z-index: 1000; }
 
 .content h1 {
   color: #fff;
