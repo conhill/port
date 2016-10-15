@@ -317,24 +317,6 @@ body {
   .layer-0 {
     left: 0 !important; }
     .layer-0 h1 {
-      padding: 10px 20px !important; }
-
-  .layer-1 {
-    height: 400px; }
-
-  .layer-2 {
-    top: 0px; }
-
-  .layer-3 {
-    top: 90px; }
-
-  .layer-4 {
-    top: 45px; }
-
-  .layer-5 {
-    top: 170px; }
-
-  .layer-6 {
-    top: 160px; } }
+      padding: 10px 20px !important; } }
 
 /*# sourceMappingURL=custom.css.map */
