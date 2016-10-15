@@ -301,26 +301,26 @@ body {
 
   .layer-2 {
     background-size: 100% 300px;
-    top: 300px; }
+    top: 100px; }
 
   .layer-3 {
     background-size: 100% 300px;
-    top: 430px; }
+    top: 250px; }
 
   .layer-4 {
     background-size: 100% 300px;
-    top: 390px; }
+    top: 200px; }
 
   .layer-5 {
     background-size: 100% 200px;
-    top: 590px; }
+    top: 270px; }
 
   .layer-6 {
-    background-size: 100% 300px;
-    top: 590px; }
+    background-size: 100% 200px;
+    top: 270px; }
 
   .content {
-    top: 1000px; } }
+    top: 110vh; } }
 @media handheld, screen and (max-width: 600px) and (max-device-width: 600px) {
   .nav-items li {
     font-size: 12px; }
@@ -349,25 +349,25 @@ body {
 
   .layer-2 {
     background-size: 100% 300px;
-    top: 300px; }
+    top: 100px; }
 
   .layer-3 {
     background-size: 100% 300px;
-    top: 430px; }
+    top: 250px; }
 
   .layer-4 {
     background-size: 100% 300px;
-    top: 390px; }
+    top: 200px; }
 
   .layer-5 {
     background-size: 100% 200px;
-    top: 590px; }
+    top: 270px; }
 
   .layer-6 {
-    background-size: 100% 300px;
-    top: 590px; }
+    background-size: 100% 200px;
+    top: 270px; }
 
   .content {
-    top: 1000px; } }
+    top: 110vh; } }
 
 /*# sourceMappingURL=custom.css.map */
