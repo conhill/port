@@ -427,17 +427,30 @@ body {
     }
     .layer-2 {
 	//top: 0px;
+	background-size: 100% 300px;
+	top: 300px;
     }
     .layer-3 {
 	//top: 90px;
+	background-size: 100% 300px;
+	top: 430px;
     }
     .layer-4 {
 	//top: 45px;
+	background-size: 100% 300px;
+	top: 390px;
     }
     .layer-5 {
 	//top: 170px;
+	background-size: 100% 200px;
+	top: 590px;
     }
     .layer-6 {
 	//top: 160px;
+	background-size: 100% 300px;
+	top: 590px;
+    }
+    .content{
+	top: 1000px;
     }
 }
