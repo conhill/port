@@ -36,15 +36,15 @@ body {
   visibility: visible;
   transition: height 0.7s;
   z-index: 61;
-  overflow: hidden; }
+  overflow: hidden;
+  text-align: center; }
   .loader h1 {
     animation: color-me-in 4s;
     margin: 0 auto;
     display: block;
     width: 300px;
     top: 35vh;
-    left: 38vw;
-    position: absolute;
+    position: relative;
     border: 0;
     font-size: 8vw !important;
     box-shadow: none; }
