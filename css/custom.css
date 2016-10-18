@@ -321,10 +321,7 @@ body {
 
   .layer-6 {
     background-size: 100% 200px;
-    top: 240px; }
-
-  .content {
-    top: 110vh; } }
+    top: 240px; } }
 @media handheld, screen and (max-width: 600px) and (max-device-width: 600px) {
   .nav-items li {
     font-size: 12px; }
