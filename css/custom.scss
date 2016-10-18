@@ -238,7 +238,7 @@ body {
     background-color: #353E43;
     transition: all 0.25s ease-in-out;
     height: 20px;
-    z-index: 20;
+    z-index: 21;
 
     &.scrolled {
         background-color: #DFE4E8;
@@ -496,7 +496,7 @@ body {
         border: 0;
         font: inherit;
         vertical-align: top;
-        z-index: 1000;
+        z-index: 20;
         clear: both;
         overflow: hidden;
         top: 0;
