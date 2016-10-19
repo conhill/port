@@ -99,7 +99,7 @@ body {
 }
 
 .parallax-layer {
-    width: 100%;
+    width: 107%;
     height: 500px;
     position: fixed;
     left: 0;
@@ -153,8 +153,9 @@ h1 {
     background-image: url("../../port/img/fw-back-mountains.png");
 
     //background-size: 100% 340px;
-    background-size: 100% 35vh;
+    background-size: 110% 35vh;
     background-repeat: no-repeat;
+    left: -3%;
 }
 
 .layer-3 {
@@ -165,8 +166,8 @@ h1 {
     background-repeat: no-repeat;
 
     //background-size: 54% 300px;
-    background-size: 54% 35vh;
-    left: 6vw;
+    background-size: 58% 35vh;
+    left: 3vw;
 }
 
 .layer-4 {
@@ -176,8 +177,9 @@ h1 {
     background-image: url("../../port/img/fw-side-mountains.png");
 
     //background-size: 100% 310px;
-    background-size: 100% 36vh;
+    background-size: 110% 36vh;
     background-repeat: no-repeat;
+    left: -4%;
 }
 
 .layer-5 {
@@ -187,9 +189,10 @@ h1 {
     background-image: url("../../port/img/fw-back-hills.png");
 
     //background-size: 100% 300px;
-    background-size: 100% 30vh;
+    background-size: 110% 30vh;
     background-repeat: no-repeat;
-    left: 0px;
+    left: -5%;
+    width: 110%;
 }
 
 .layer-6 {
@@ -199,10 +202,12 @@ h1 {
     background-image: url("../../port/img/fw-font-mountains.png");
 
     //background-size: 100% 290px;
-    background-size: 100% 34vh;
+    background-size: 110% 34vh;
 
     /* left: 5%; */
     background-repeat: no-repeat;
+    left -7%;
+    width: 115%;
 }
 
 .content {
@@ -465,6 +470,10 @@ body {
         li {
             font-size: 12px;
         }
+    }
+
+    body {
+        overflow: visible;
     }
 
     .no-parallax {

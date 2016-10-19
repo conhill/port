@@ -25,14 +25,16 @@
     <div class="no-parallax">
          <h1>Connor Hill</h1>
     </div>
-    <div class="parallax-container">
-        <div class="parallax-layer layer-0" data-parallax-speed="0.05" data-max-scroll="1000"><h1>Connor Hill</h1></div>
-        <div class="parallax-layer layer-1" data-parallax-speed="0.1" data-max-scroll="1000"></div>
-        <div class="parallax-layer layer-2" data-parallax-speed="0.3" data-max-scroll="1000"></div>
-        <div class="parallax-layer layer-3" data-parallax-speed="0.5" data-max-scroll="1000"></div>
-        <div class="parallax-layer layer-4" data-parallax-speed="0.55" data-max-scroll="1000"></div>
-        <div class="parallax-layer layer-5" data-parallax-speed="0.8" data-max-scroll="1000"></div>
-        <div class="parallax-layer layer-6" data-parallax-speed="0.95" data-max-scroll="1000"></div>
+    <div id="scene" class="parallax-container" style="position: fixed;overflow: visible; width: 100%;  height: 1000px;">
+        <div class="parallax-layer layer-0" data-depth=".1"  data-parallax-speed="0.05" data-max-scroll="1000">
+            <h1 style="left: 30px; position: relative;">Connor Hill</h1>
+        </div>
+        <div class="parallax-layer layer-1 layer" data-parallax-speed="0.1" data-max-scroll="1000"></div>
+        <div class="parallax-layer layer-2 layer" data-depth=".1"   data-parallax-speed="0.3" data-max-scroll="1000"></div>
+        <div class="parallax-layer layer-3 layer" data-depth=".2" data-parallax-speed="0.5" data-max-scroll="1000"></div>
+        <div class="parallax-layer layer-4 layer" data-depth=".3"  data-parallax-speed="0.55" data-max-scroll="1000"></div>
+        <div class="parallax-layer layer-5 layer" data-depth=".45" data-parallax-speed="0.8" data-max-scroll="1000"></div>
+        <div class="parallax-layer layer-6 layer" data-depth=".65"  data-parallax-speed="0.95" data-max-scroll="1000"></div>
 
     </div>
 
@@ -113,26 +115,57 @@
 </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-<script src="../../port/js/parallax.js"></script>
+<script src="../../port/js/parallax-new.js"></script>
 
 <script type="text/javascript">
     /**
      * Created by Dnoop on 9/10/2016.
      */
+     var scene=document.getElementById("scene"), parallax = new Parallax(scene);
     $(document).ready(function () {
+        // $(window).scrollTop(10);
+       //  $(window).scrollTop(0);
+        console.log("ran 2");
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            // some code..
             $('body').addClass('mobile-loaded');
             $(".loader").addClass("mobile-loaded");
         } else {
             setTimeout(function () {
                 $('body').addClass('loaded');
                 $(".loader").addClass("loaded");
+                $(window).scrollTop(1);
+                $(window).scrollTop(0);
             }, 1500);
         }
     });
 
+
     $(function () {
+         //var scene=document.getElementById("scene"), parallax = new Parallax(scene);
+        //console.log("run");
+
+        function waitForPause(ms, callback) {
+            var timer;
+
+            return function() {
+                var self = this, args = arguments;
+                clearTimeout(timer);
+                timer = setTimeout(function() {
+                    callback.apply(self, args);
+                }, ms);
+            };
+        }
+
+        this.start = function() {
+            // wrap around your callback
+            $window.scroll( waitForPause( 90, self.worker ) );
+        };
+
         $(window).on('scroll', function () {
+            //console.log("rann");
+           parallax.updateLayers(); 
+          //parallax.enable();
             distanceFromTop = $(window).scrollTop();
 
             if (distanceFromTop < 800)
@@ -143,9 +176,9 @@
                 $('#header').addClass('scrolled');
                 $('#header').css('background-color', '#DFE4E8').fadeIn(500);
             }
-            else if (distanceFromTop < 1000 && distanceFromTop >= 850)
+            else if (distanceFromTop < 800 && distanceFromTop >= 700)
                 $('#header').css('background-color', '#CACFD3').fadeIn(500);
-            else if (distanceFromTop < 850 && distanceFromTop >= 600)
+            else if (distanceFromTop < 700 && distanceFromTop >= 600)
                 $('#header').css('background-color', '#B5BBBF').fadeIn(500);
             else if (distanceFromTop < 600 && distanceFromTop >= 500)
                 $('#header').css('background-color', '#9FA6AA').fadeIn(500);
