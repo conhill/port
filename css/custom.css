@@ -44,6 +44,7 @@ body {
     display: block;
     width: 300px;
     top: 35vh;
+    position: relative;
     border: 0;
     font-size: 8vw !important;
     box-shadow: none; }
