@@ -1,3 +1,6 @@
+$bp-larger-than-mobile: "max-width: 600px" !default;
+$bp-larger-than-tablet: "max-width: 950px" !default;
+
 @font-face {
     font-family: AurulentSans;
     src: url(../font/AurulentSans-Regular.otf);
@@ -418,6 +421,120 @@ body {
 
 .no-parallax {
     display: none;
+}
+
+//For browsers
+@media (#{$bp-larger-than-tablet}) {
+    .work-experience, .about {
+        .job-container, .about-container {
+            width: 100%;
+            padding: 0 15px;
+        }
+    }
+}
+
+@media (#{$bp-larger-than-mobile}) {
+    .nav-items {
+        li {
+            font-size: 12px;
+        }
+    }
+
+    body {
+        overflow: visible;
+    }
+
+    .no-parallax {
+        background-image: url(/Portfolio/img/mountains-mobile.jpg);
+        display: block;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        height: 550px;
+        position: relative;
+        z-index: 10;
+        text-align: center;
+
+        h1 {
+            font-size: 44px !important;
+            top: 50px;
+            position: relative;
+            padding: 10px 20px;
+            display: inline-block;
+            text-align: center;
+            margin: 30px 0;
+        }
+    }
+
+    .content {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font: inherit;
+        vertical-align: top;
+        z-index: 1000;
+        clear: both;
+        overflow: hidden;
+        top: 0;
+    }
+
+    .social-container {
+        h3 {
+            margin-left: 20px;
+        }
+
+        p {
+            margin-left: 10px;
+        }
+    }
+
+    .social {
+        h3, h4 {
+            margin-left: 10px;
+        }
+
+        p {
+            margin-left: 20px;
+        }
+    }
+
+    .parallax-container {
+        display: none;
+    }
+
+    .parallax-layer.layer-0 {
+        width: 100%;
+        text-align: center;
+
+        h1 {
+            font-size: 50px !important;
+            padding: 0;
+        }
+    }
+
+    .job-container, .work-experience {
+        width: 100% !important;
+        padding: 10px;
+    }
+
+    .about-container, .skills-container {
+        width: 95% !important;
+    }
+
+    .skills {
+        h4 {
+            font-size: 22px !important;
+        }
+    }
+
+    .layer-0 {
+        left: 0 !important;
+
+        h1 {
+            padding: 10px 20px !important;
+        }
+    }
 }
 
 @media handheld, screen and (min-width: 601px) and (max-width: 910px) and (min-device-width: 601px) and (max-device-width: 910px) {
