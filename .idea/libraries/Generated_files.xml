@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/js/parallax-new.min.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/js/parallax.min.js" />
+      <root url="file://$PROJECT_DIR$/js/parallax-new.min.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

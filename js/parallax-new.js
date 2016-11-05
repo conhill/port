@@ -35,23 +35,12 @@ ParallaxPart = (function() {
     };
 
     ParallaxPart.prototype.setYTransform = function(val) {
-        //console.log("HIIII");
-        //console.log(val);
-        //console.log(sObj1);
-        // console.log(window.ele1);
-        // console.log("offset: " + offset);
         window.sObj1.css(window.ele1, 'transform', 'translate3d(' + window.Xx1 + ',' + window.offset1 + 'px ,0)');
         window.sObj2.css(window.ele2, 'transform', 'translate3d(' + window.Xx2 + ',' + window.offset2 + 'px ,0)');
         window.sObj3.css(window.ele3, 'transform', 'translate3d(' + window.Xx3 + ',' + window.offset3 + 'px ,0)');
         window.sObj4.css(window.ele4, 'transform', 'translate3d(' + window.Xx4 + ',' + window.offset4 + 'px ,0)');
         window.sObj5.css(window.ele5, 'transform', 'translate3d(' + window.Xx5 + ' ,' + window.offset5 + 'px ,0)');
         window.sObj6.css(window.ele6, 'transform', 'translate3d(' + window.Xx6 + ' ,' + window.offset6 + 'px ,0)');
-        // this.el.style.webkitTransform = "translate3d(0, " + val + "px, 0)";
-        // this.el.style.MozTransform = "translate3d(0, " + val + "px, 0)";
-        // this.el.style.OTransform = "translate3d(0, " + val + "px, 0)";
-        // this.el.style.transform = "translate3d(0, " + val + "px, 0)";
-        // this.el.style.msTransform = "translateY(" + val + "px)";
-        // requestAnimationFrame(Sobj.onAnimationFrame());
     };
 
     return ParallaxPart;
