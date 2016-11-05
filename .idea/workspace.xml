@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="55030f8f-a877-4c90-bb95-504b23bb5925" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/custom.css" afterPath="$PROJECT_DIR$/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/custom.css.map" afterPath="$PROJECT_DIR$/css/custom.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/custom.min.css" afterPath="$PROJECT_DIR$/css/custom.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/custom.scss" afterPath="$PROJECT_DIR$/css/custom.scss" />
     </list>
@@ -27,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2210">
-              <caret line="20" column="69" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="69" />
+            <state relative-caret-position="935">
+              <caret line="190" column="0" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -60,8 +61,8 @@
       <file leaf-file-name="custom.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/custom.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="462" column="60" selection-start-line="462" selection-start-column="60" selection-end-line="462" selection-end-column="60" />
+            <state relative-caret-position="156">
+              <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -87,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="241">
-              <caret line="331" column="53" selection-start-line="331" selection-start-column="53" selection-end-line="331" selection-end-column="53" />
+              <caret line="23" column="4" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -374,12 +375,12 @@
       <workItem from="1476225449096" duration="1962000" />
       <workItem from="1476423384231" duration="9726000" />
       <workItem from="1476569972500" duration="153000" />
-      <workItem from="1478382996330" duration="1422000" />
+      <workItem from="1478382996330" duration="1727000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30087000" />
+    <option name="totallyTimeSpent" value="30392000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="916" extended-state="0" />
@@ -756,14 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/parallax.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/Skeleton-Sass-master/scss/skeleton.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9928">
@@ -796,26 +789,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/custom.css">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="331" column="53" selection-start-line="331" selection-start-column="53" selection-end-line="331" selection-end-column="53" />
+        <state relative-caret-position="935">
+          <caret line="190" column="0" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/parallax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/custom.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="462" column="60" selection-start-line="462" selection-start-column="60" selection-end-line="462" selection-end-column="60" />
+        <state relative-caret-position="156">
+          <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2210">
-          <caret line="20" column="69" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="69" />
+        <state relative-caret-position="241">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="4" />
           <folding />
         </state>
       </provider>
