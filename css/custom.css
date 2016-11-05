@@ -322,7 +322,7 @@ body {
       -webkit-transform: scale(1, 1);
       -ms-transform: scale(1, 1);
       transform: scale(1, 1);
-      background-image: url("../../port/img/digital.jpg");
+      background-image: url("../../port/img/digital1.jpg");
       float: none; }
     .works .DA .work-img-sit, .works .sitter .work-img-sit, .works .game .work-img-sit {
       background-size: cover;
@@ -330,7 +330,7 @@ body {
       -webkit-transform: scale(1, 1);
       -ms-transform: scale(1, 1);
       transform: scale(1, 1);
-      background-image: url("../../port/img/sitter.JPG");
+      background-image: url("../../port/img/sitter1.JPG");
       float: none; }
     .works .DA .work-img-game, .works .sitter .work-img-game, .works .game .work-img-game {
       background-size: cover;
@@ -338,7 +338,7 @@ body {
       -webkit-transform: scale(1, 1);
       -ms-transform: scale(1, 1);
       transform: scale(1, 1);
-      background-image: url("../../port/img/newest.JPG");
+      background-image: url("../../port/img/newest1.JPG");
       float: none; }
     .works .DA .work-about-da, .works .sitter .work-about-da, .works .game .work-about-da {
       background-color: #fff;
