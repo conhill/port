@@ -321,7 +321,7 @@ body {
       -webkit-transform: scale(1, 1);
       -ms-transform: scale(1, 1);
       transform: scale(1, 1);
-      background-image: url("../../port/img/sitter.jpg");
+      background-image: url("../../port/img/sitter.JPG");
       float: none; }
     .works .DA .work-img-game, .works .sitter .work-img-game, .works .game .work-img-game {
       background-size: cover;
@@ -329,7 +329,7 @@ body {
       -webkit-transform: scale(1, 1);
       -ms-transform: scale(1, 1);
       transform: scale(1, 1);
-      background-image: url("../../port/img/newest.jpg");
+      background-image: url("../../port/img/newest.JPG");
       float: none; }
     .works .DA .work-about-da, .works .sitter .work-about-da, .works .game .work-about-da {
       background-color: #fff;
