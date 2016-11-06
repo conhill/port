@@ -474,86 +474,88 @@ ParallaxManager = (function() {
         // console.log("set Pos");
         x += 'px';
         y += 'px';
+
+        this.css(element, 'transform', 'translate3d(' + x + ', 0 ,0)');
         // console.log(element.classList[1]);
         // console.log(typeof element.classList[1])
         // console.log(element.classList[1] === 'layer-1');
         // console.log(window.offset0);
         // console.log(window.offset1);
         // console.log(this.transform3DSupport);
-        if (element.classList[1] == 'layer-1') {
-            if (this.transform3DSupport) {
-                window.sObj1 = this;
-                window.ele1 = element;
-                window.Xx1 = x;
-                this.css(element, 'transform', 'translate3d(' + x + ',' + window.offset1 + 'px ,0)');
-            } else if (this.transform2DSupport) {
-                this.css(element, 'transform', 'translate(' + x + ',' + window.offset1 + ')');
-            } else {
-                element.style.left = x;
-                element.style.top = window.offset1;
-            }
-        } else if (element.classList[1] == 'layer-2') {
-            window.sObj2 = this;
-            window.ele2 = element;
-            window.Xx2 = x;
-            if (this.transform3DSupport) {
-                // console.log(window.offset2);
-                this.css(element, 'transform', 'translate3d(' + x + ',' + window.offset2 + 'px ,0)');
-            } else if (this.transform2DSupport) {
-                this.css(element, 'transform', 'translate(' + x + ',' + window.offset2 + ')');
-            } else {
-                element.style.left = x;
-                element.style.top = window.offset2;
-            }
-        } else if (element.classList[1] == 'layer-3') {
-            window.sObj3 = this;
-            window.ele3 = element;
-            window.Xx3 = x;
-            if (this.transform3DSupport) {
-                this.css(element, 'transform', 'translate3d(' + x + ', ' + window.offset3 + 'px ,0)');
-            } else if (this.transform2DSupport) {
-                this.css(element, 'transform', 'translate(' + x + ',' + window.offset3 + ')');
-            } else {
-                element.style.left = x;
-                element.style.top = window.offset3;
-            }
-        } else if (element.classList[1] == 'layer-4') {
-            window.sObj4 = this;
-            window.ele4 = element;
-            window.Xx4 = x;
-            if (this.transform3DSupport) {
-                this.css(element, 'transform', 'translate3d(' + x + ',' + window.offset4 + 'px ,0)');
-            } else if (this.transform2DSupport) {
-                this.css(element, 'transform', 'translate(' + x + ',' + window.offset4 + ')');
-            } else {
-                element.style.left = x;
-                element.style.top = window.offset4;
-            }
-        } else if (element.classList[1] == 'layer-5') {
-            window.sObj5 = this;
-            window.ele5 = element;
-            window.Xx5 = x;
-            if (this.transform3DSupport) {
-                this.css(element, 'transform', 'translate3d(' + x + ',' + window.offset5 + 'px ,0)');
-            } else if (this.transform2DSupport) {
-                this.css(element, 'transform', 'translate(' + x + ',' + window.offset5 + ')');
-            } else {
-                element.style.left = x;
-                element.style.top = window.offset5;
-            }
-        } else if (element.classList[1] == 'layer-6') {
-            window.sObj6 = this;
-            window.ele6 = element;
-            window.Xx6 = x;
-            if (this.transform3DSupport) {
-                this.css(element, 'transform', 'translate3d(' + x + ',' + window.offset6 + 'px ,0)');
-            } else if (this.transform2DSupport) {
-                this.css(element, 'transform', 'translate(' + x + ',' + window.offset6 + ')');
-            } else {
-                element.style.left = x;
-                element.style.top = window.offset6;
-            }
-        }
+        // if (element.classList[1] == 'layer-1') {
+        //     if (this.transform3DSupport) {
+        //         window.sObj1 = this;
+        //         window.ele1 = element;
+        //         window.Xx1 = x;
+        //         this.css(element, 'transform', 'translate3d(' + x + ',' + window.offset1 + 'px ,0)');
+        //     } else if (this.transform2DSupport) {
+        //         this.css(element, 'transform', 'translate(' + x + ',' + window.offset1 + ')');
+        //     } else {
+        //         element.style.left = x;
+        //         element.style.top = window.offset1;
+        //     }
+        // } else if (element.classList[1] == 'layer-2') {
+        //     window.sObj2 = this;
+        //     window.ele2 = element;
+        //     window.Xx2 = x;
+        //     if (this.transform3DSupport) {
+        //         // console.log(window.offset2);
+        //         this.css(element, 'transform', 'translate3d(' + x + ',' + window.offset2 + 'px ,0)');
+        //     } else if (this.transform2DSupport) {
+        //         this.css(element, 'transform', 'translate(' + x + ',' + window.offset2 + ')');
+        //     } else {
+        //         element.style.left = x;
+        //         element.style.top = window.offset2;
+        //     }
+        // } else if (element.classList[1] == 'layer-3') {
+        //     window.sObj3 = this;
+        //     window.ele3 = element;
+        //     window.Xx3 = x;
+        //     if (this.transform3DSupport) {
+        //         this.css(element, 'transform', 'translate3d(' + x + ', ' + window.offset3 + 'px ,0)');
+        //     } else if (this.transform2DSupport) {
+        //         this.css(element, 'transform', 'translate(' + x + ',' + window.offset3 + ')');
+        //     } else {
+        //         element.style.left = x;
+        //         element.style.top = window.offset3;
+        //     }
+        // } else if (element.classList[1] == 'layer-4') {
+        //     window.sObj4 = this;
+        //     window.ele4 = element;
+        //     window.Xx4 = x;
+        //     if (this.transform3DSupport) {
+        //         this.css(element, 'transform', 'translate3d(' + x + ',' + window.offset4 + 'px ,0)');
+        //     } else if (this.transform2DSupport) {
+        //         this.css(element, 'transform', 'translate(' + x + ',' + window.offset4 + ')');
+        //     } else {
+        //         element.style.left = x;
+        //         element.style.top = window.offset4;
+        //     }
+        // } else if (element.classList[1] == 'layer-5') {
+        //     window.sObj5 = this;
+        //     window.ele5 = element;
+        //     window.Xx5 = x;
+        //     if (this.transform3DSupport) {
+        //         this.css(element, 'transform', 'translate3d(' + x + ',' + window.offset5 + 'px ,0)');
+        //     } else if (this.transform2DSupport) {
+        //         this.css(element, 'transform', 'translate(' + x + ',' + window.offset5 + ')');
+        //     } else {
+        //         element.style.left = x;
+        //         element.style.top = window.offset5;
+        //     }
+        // } else if (element.classList[1] == 'layer-6') {
+        //     window.sObj6 = this;
+        //     window.ele6 = element;
+        //     window.Xx6 = x;
+        //     if (this.transform3DSupport) {
+        //         this.css(element, 'transform', 'translate3d(' + x + ',' + window.offset6 + 'px ,0)');
+        //     } else if (this.transform2DSupport) {
+        //         this.css(element, 'transform', 'translate(' + x + ',' + window.offset6 + ')');
+        //     } else {
+        //         element.style.left = x;
+        //         element.style.top = window.offset6;
+        //     }
+        // }
     };
 
     Parallax.prototype.onOrientationTimer = function() {
