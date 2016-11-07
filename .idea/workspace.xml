@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55030f8f-a877-4c90-bb95-504b23bb5925" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/parallax-new.js" afterPath="$PROJECT_DIR$/js/parallax-new.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/parallax-new.min.js" afterPath="$PROJECT_DIR$/js/parallax-new.min.js" />
-    </list>
+    <list default="true" id="55030f8f-a877-4c90-bb95-504b23bb5925" name="Default" comment="" />
     <ignored path="port.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -133,8 +129,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="-4" />
+    <option name="y" value="-7" />
     <option name="width" value="1612" />
     <option name="height" value="912" />
   </component>
@@ -375,15 +371,15 @@
       <workItem from="1476225449096" duration="1962000" />
       <workItem from="1476423384231" duration="9726000" />
       <workItem from="1476569972500" duration="153000" />
-      <workItem from="1478382996330" duration="4278000" />
+      <workItem from="1478382996330" duration="4480000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32943000" />
+    <option name="totallyTimeSpent" value="33145000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1612" height="912" extended-state="0" />
+    <frame x="-4" y="-7" width="1612" height="912" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16290727" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
