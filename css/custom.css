@@ -306,7 +306,8 @@ body {
     font-size: 12px; }
 
   body {
-    overflow: visible; }
+    overflow: visible;
+    width: 100%; }
 
   .no-parallax {
     background-image: url(/Portfolio/img/mountains-mobile.jpg);
@@ -337,7 +338,8 @@ body {
     z-index: 1000;
     clear: both;
     overflow: hidden;
-    top: 0; }
+    top: 0;
+    width: 100%; }
 
   .social-container h3 {
     margin-left: 20px; }
@@ -360,7 +362,7 @@ body {
       padding: 0; }
 
   .job-container, .work-experience {
-    width: 100% !important;
+    width: 95% !important;
     padding: 10px; }
 
   .about-container, .skills-container {
@@ -411,7 +413,8 @@ body {
     font-size: 12px; }
 
   body {
-    overflow: visible; }
+    overflow: visible;
+    width: 100%; }
 
   .no-parallax {
     background-image: url("../../port/img/mountains-mobile.jpg");
@@ -442,7 +445,8 @@ body {
     z-index: 20;
     clear: both;
     overflow: hidden;
-    top: 0; }
+    top: 0;
+    width: 100%; }
 
   .social-container h3 {
     margin-left: 20px; }
@@ -465,7 +469,7 @@ body {
       padding: 0; }
 
   .job-container, .work-experience {
-    width: 100% !important;
+    width: 95% !important;
     padding: 10px; }
 
   .about-container, .skills-container {
