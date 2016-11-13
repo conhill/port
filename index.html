@@ -2,10 +2,12 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="../../port/css/custom.css">
+    <link rel="stylesheet" href="../../port/css/custom.min.css">
     <link rel="stylesheet" href="../../port/css/Skeleton-2.0.4/css/skeleton.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans+Condensed:300" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Connor Hill - Portfolio Site</title>
+    <meta name="description" content="Portoflio site of Connor Hill showing previous works and new techniques.">
 
 </head>
 
@@ -19,13 +21,12 @@
         <ul class="nav-items">
             <li><a href="https://www.linkedin.com/in/connor-hill-b03b3055">LinkedIn</a></li>
             <li><a href="https://github.com/conhill/">Github</a></li>
-            <li><a href="https://codepen.io/Dnoop/">Codepen</a></li>
         </ul>
     </div>
     <div class="no-parallax">
          <h1>Connor Hill</h1>
     </div>
-    <div id="scene" class="parallax-container" style="position: fixed;overflow: visible; width: 100%;  height: 1000px;">
+    <div id="scene" class="parallax-container" style="position: relative;overflow: visible; width: 100%;  height: 1000px;">
         <div class="parallax-layer layer-0" data-depth=".1"  data-parallax-speed="0.05" data-max-scroll="1000">
             <h1>Connor Hill</h1>
         </div>
@@ -89,6 +90,43 @@
                 </div>
             </div>
         </div>
+        <div class="works twelve columns">
+            <div class="DA">
+                <div class="work-img-da six columns"></div>
+                <div class="work-about-da six columns">
+                    <h3>Digital Associates Website and Web Apps</h3>
+                    <p>Built and maintained the company's responsive website using HTML5/SCSS/Javascript and online storefront with Magento 2.0.<br><br>
+                        Developed multiple consumer facing Angular web applications.<br><br>
+                        Utilized Agile based development practices to rapidly iterate and advance the site, storefront and web applications.</p>
+                    <span>2016</span>
+                </div>
+            </div>
+
+            <div class="sitter">
+                <div class="work-img-sit six columns"></div>
+                <div class="work-about-sit six columns">
+                    <h3>Sitter Etc Web App</h3>
+                    <p>Developed a HTML5/CSS3/JQuery, cross-mobile compatible Web Application with Cordova, Stripe and PhoneGap.<br><br>
+                        A Parent, search nearby for nearby, recommended sitters, request sitter to work, pay through stripe on the app.<br><br>
+                        A Sitter, set available times and rates on your calender, accept/decline requests.<br><br>
+                    </p>
+                    <span>2014</span>
+                </div>
+
+            </div>
+            <div class="game">
+                <div class="work-img-game six columns">
+                </div>
+                <div class="work-about-game six columns">
+                    <h3>Game Together Website</h3>
+                    <p>Developed a responsive web site, in HTML/CSS using PHP and MySQL for the backend.<br><br>
+                        Allowed user to create accounts and submit posts to various console  related pages (Sony, Microsoft, Nintendo, PC).<br><br>
+                        Post displayed in a sortable list, displaying information about game, console, Gamertag and goal (Campaign, Online for Fun, Competitive, etc...)
+                    </p>
+                    <span>2013</span>
+                </div>
+            </div>
+        </div>
         <footer>
             <div class="twelve columns social">
                 <div class="six columns social2">
@@ -115,52 +153,58 @@
 </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-<script src="../../port/js/parallax-new.js"></script>
+<script src="../../port/js/parallax-new.min.js"></script>
 
 <script type="text/javascript">
     /**
      * Created by Dnoop on 9/10/2016.
      */
-     var scene=document.getElementById("scene"), parallax = new Parallax(scene);
-    $(document).ready(function () {
-        // $(window).scrollTop(10);
-       //  $(window).scrollTop(0);
-        console.log("ran 2");
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            // some code..
-            $('body').addClass('mobile-loaded');
-            $(".loader").addClass("mobile-loaded");
-        } else {
-            setTimeout(function () {
+
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || $(window).width() < 601) {
+        // some code..
+        $('body').addClass('mobile-loaded');
+        $(".loader").addClass("mobile-loaded");
+    } else {
+        setTimeout(function () {
+        }, 300);
+
+        var pageLoaded = false;
+        var timeElapsed = false;
+
+        function fadeOutLoadScreen() {
+            if (timeElapsed && pageLoaded) {
                 $('body').addClass('loaded');
                 $(".loader").addClass("loaded");
-                $(window).scrollTop(1);
-                $(window).scrollTop(0);
-            }, 1500);
+            }
         }
-    });
+
+        setTimeout(function () {
+            timeElapsed = true;
+            fadeOutLoadScreen();
+        }, 2000);
+
+        $(window).on('load', function () {
+            pageLoaded = true;
+            fadeOutLoadScreen();
+        });
+    }
+
+     var scene=document.getElementById("scene"), parallax = new Parallax(scene);
 
 
     $(function () {
          //var scene=document.getElementById("scene"), parallax = new Parallax(scene);
-        //console.log("run");
-
-        function waitForPause(ms, callback) {
-            var timer;
-
-            return function() {
-                var self = this, args = arguments;
-                clearTimeout(timer);
-                timer = setTimeout(function() {
-                    callback.apply(self, args);
-                }, ms);
-            };
-        }
-
-        this.start = function() {
-            // wrap around your callback
-            $window.scroll( waitForPause( 90, self.worker ) );
-        };
+        $( window ).resize(function() {
+            if($(window).width() >= 585){
+                //console.log("loaded");
+                $('body').addClass('loaded');
+                $('body').removeClass('mobile-loaded');
+            }
+            else{
+                $('body').addClass('mobile-loaded');
+                $('body').removeClass('loaded');
+            }
+        });
 
         $(window).on('scroll', function () {
             //console.log("rann");
@@ -197,54 +241,6 @@
         });
 
 
-        //console log
-
-        console.log("sossoossyNmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmdhsoooooooooymmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmdddddsss");
-        console.log("ooo++++oymmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmhys++++++++++++++hmmmmmmmmmmmmmmmmmmmmmmmmmmmdddddddddmsoo");
-        console.log("oooooooommmmmmmmmmmmmmmmmmmmmmmmmmmmmmmdo++++++oo+++++++++++ymNmmmmmmmmmmmmmmmmmmmmmmmmdddmddddddhoo");
-        console.log("ooooooosNmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmo+++++++oo++++++++++++ossdmmmmmmmmmmmmmmmmmmmmmdmddmmdddddm+o");
-        console.log("ooooooosmmmmmmmmmmmmmmmmmmmmmmmmmmmmmms++++++++++++++++++++++++++osyyhhmNdmmmmmmmmmmdmmmddmddddddm+o");
-        console.log("oooooooommmmmmmmmmmmmmmmmmmmmmmmmmmmmh+++++++++++++++++++++++++++++++++ooooshhhdsyyyoooo+yosdddddm+o");
-        console.log("ooooooooNmmmmmmmmmmmmmmmmmmmmmmmmmmmmo++++++++++++++++++++++++++++++++++++++++++++++++++++++oddddm+o");
-        console.log("ooooooo+mmmdhssdmmmmmmmmmmmmmmmmmmmmh++++++ooo++++++++++++++++++++++++++o++++++++++++++++++++ydddhoo");
-        console.log("oooooooohhossosoymmmmmmmmmmmmmmddddmo++++osyo++++++++++++++++++++++++++oo++++++++++++++++++++odddooo");
-        console.log("oooooosyossooosy+ymmmmmmmddddddddddd+++osyyo++++++++++++++++++++++++++oo+++++++++++++++++++++sddyooo");
-        console.log("ooo+ossoyo+++ysso+dmmmmdddddddddhyoo++++ooo+++++++++++++++++++++++++++s+++o+++++++++++++++++ohddoooo");
-        console.log("ooooss+yo++++ososooydmmdddddmmyoo+++++++oo++++++++++++++++oosoo++++++os++++++++++++++++++++oyddooooo");
-        console.log("oooosoos+++++++++o++omdddddmdy++++++++++ooyyyyyyyyyyyyhdddmmmmdhso+++o++o++++++++++++++++++ssmsooooo");
-        console.log("ooooosoo+++++++++++++hddddddh++++++++oooo++oooooooooooossyhddmhyo+oso++oso+++++++++++++++++shsoooooo");
-        console.log("ooooos+o++++++osso+++ydddddmo++++++++osyy+/++oo+++++++++++osyyssssyso++osso++++ooo+++++++++oyooooooo");
-        console.log("ooooos++++++ossys++++smddddh+++++++++++oss:...-:+s+++ossooosssyssso++++osyysshdmmdhso+++++++y+++++++");
-        console.log("oooooos+o+++oyys+++++omddddy++++++++++++ooo+-`  -/`...-yysosoooso+++++++syyyyyysyyhdddyoo+++h+++++++");
-        console.log("++++++ooos++ooyy++++++mddddo++++++++++++++++++/-.....-/oso+o+++++++++++shssso+++++++ossso++sy+++++++");
-        console.log("+++++++soos++++o++++++hddmd++++++++++++++++++++++++++++++++++++++++++osssssso+++oo++++++++ss++++++++");
-        console.log("++++++++sooso+++++++++ohhhho++++++++++++++++++++++++++++++++++++++++oso++oys.``.o/+oooo++os+++++++++");
-        console.log("+++++++++ho+o++++++++++oyoo+++++++++++++++++++++++++++++++++++++++++o+++++oso+-..``.:os+oo++++++++++");
-        console.log("+++++++++sdyo+ooo+++++++sso+++++++++++++++++++++++++++++++++++++++++++++++++o+++++oooo+oo////+++++++");
-        console.log("++++++++//hmds++oso++++++++++//++++++++++++++++++++++++++++++//++++s++++++++++++++o+++oo////////////");
-        console.log("//////////+mmyyoos++++++++++///++++////////////////////////////++++y+/++++++++++++++++s/////////////");
-        console.log("///////////yho+o+++/+++/////////////////////////////////++/////////h+////////++++++++s/:////////////");
-        console.log(":::::::::::s++//////////////////////++/////////:////:::+/+///://///ss+//////////////o/:::://////////");
-        console.log(":::::::::::o///////+////////://///:/s+++////::::::::::::/ooo/:::::/ys//:///////////++--:::::////////");
-        console.log("-----------s///////+///::::::::::::os//::::::::::::::::::::////++so+/::::::::::////o------::::::::::");
-        console.log("----------/+:::::::/+:::::::::::::/ss/+::::::--------------:://+o+::::::::::::::::+/.....-----------");
-        console.log(".......---s:::::::::o/:::::::::---/sy://::------------:::----:/s/:------::::::::::o..`...........-..");
-        console.log("....:oyhdd+:::::::::/o:------------+y:--://://///+++///////::::o:--------::------+-```````````.....`");
-        console.log("```-mNNNNy-----------/o:------------+:-----:osoosssso+++///++++++:--------------:/``````````````````");
-        console.log("```yNNNNh-------------:o/---------------------//:/+hhyyyss/++//+++:-----///-----+``````      `` ``` ");
-        console.log("``+NNNNm/---------------+o:--------------------:/--:osssssyso+++os+/:/:--:s:---+.```                ");
-        console.log("`:NNNNNNmh+:-------------:++:----/------------..--.--:/o+/+ossssymhso+---:/:--:/                    ");
-        console.log("-mNNNNNNNNNms/-------------/oo:--o/-...............------:::::/++oo:...------:/                     ");
-        console.log("mNNNNNNNNNdyymds/--------..-:+oo/+o:..............-:/+oo+/:::::::+/-....---::.                      ");
-        console.log("NNNNNNNNNmodNNNNNdy+---......-/+oso+-..............-:::/oss//////:-....-//-`                        ");
-        console.log("NNNNNNNNNyyNNNNNNmhyyhs/--....-/++os+-..............--::::::::/:-....-//.                           ");
-        console.log("NNNNNNNNhsmNNNNNmsymNNNNmho:-..-:+++oo/-.....................---...:+/`                             ");
-        console.log("NNNNNNNhsmNNNNNNhomNNNNNNNNNdy+--:++++oo:-.......................-+/`                               ");
-        console.log("NNNNNmhsmNNNNNNhodNNNNNNNNNNNNNmho++++++oo:-...................-//`                                 ");
-        console.log("NNNmyshmNNNNNNhodNNNNNNNNNNNmmmmmmmdhs++++oo:-...............-:/.                                   ");
-        console.log("mhsydNNNNNNNmysmNNNNNNNNNNNmmmmmmmmmmmmdyso+oso/--.........-/+-                                     ");
-        console.log("shmNNNmdhyysyhmNNNNNNNNNNNmmmmmmmmmmmmmmmmmdhyosyssoo++/////`                                       ");
-        console.log("NNNdysyhdmNNNNNNNNNNNNNNNNmmmmmmmmmmmmmmmmmmmmmmhysodmmh:                                           ");
 
     });
 </script>
