@@ -206,6 +206,7 @@
         function fadeOutLoadScreen() {
             if (timeElapsed && pageLoaded) {
                 $('body').addClass('loaded');
+                $('.wrapper').addClass('loaded');
                 $(".loader").addClass("loaded");
             }
         }
@@ -217,9 +218,13 @@
 
         $(window).on('load', function () {
             pageLoaded = true;
+            window.scrollTo(0,0);
             fadeOutLoadScreen();
         });
     }
+    $(document).ready(function(){
+        $(this).scrollTop(0);
+    });
 
      var scene=document.getElementById("scene"), parallax = new Parallax(scene);
 
