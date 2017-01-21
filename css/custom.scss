@@ -3,16 +3,21 @@ $bp-larger-than-tablet: "max-width: 950px" !default;
 
 @font-face {
     font-family: AurulentSans;
-    src: url(../font/AurulentSans-Regular.otf);
+    src: url(../../port/font/AurulentSans-Regular.otf);
 }
 
 @font-face {
     font-family: AurulentSans-Bold;
-    src: url(../font/AurulentSans-Bold.otf);
+    src: url(../../port/font/AurulentSans-Bold.otf);
+}
+
+@font-face {
+    font-family: ArchivoBlack;
+    src: url(../../port/font/ArchivoBlack.otf);
 }
 
 html {
-    background: black;
+    background: red;
 }
 
 li {
@@ -27,7 +32,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    //font-family: Geometria;
     display: inline;
     font-family: 'Open Sans Condensed', sans-serif;
 }
@@ -47,10 +51,26 @@ body {
     position: absolute;
 }
 
+body.loaded {
+    overflow-x: hidden;
+}
+
 .loaded {
     position: relative;
     overflow: visible;
+
+    //visibility: hidden;
 }
+
+.wrapper {
+    visibility: hidden;
+    background: black;
+}
+
+.wrapper.loaded {
+    visibility: visible;
+}
+
 .loader {
     position: fixed;
     top: 0;
@@ -95,6 +115,7 @@ body {
     //visibility: hidden;
     // z-index: -1;
     height: 0px;
+    visibility: hidden;
 }
 
 .loader.mobile-loaded {
@@ -109,6 +130,11 @@ body {
     height: 1000px;
 }
 
+.layer-0 h1 {
+    font-family: ArchivoBlack;
+    font-size: 12.5vw;
+}
+
 .parallax-layer {
     width: 107%;
     height: 500px;
@@ -118,11 +144,16 @@ body {
     background-position: bottom center;
     background-repeat: repeat-x;
     background-size: 960px 253px;
+    transform: translateY(var(--translateY)) translateX(var(--translateX));
+    transform: translateY(var(--translateY)), translateX(var(--translateX));
+
+    //transform: translateY(var(--translateY));
+    will-change: transform;
 }
 
 .parallax-layer.layer-0 {
     //top: 110px;
-    top: 20vh;
+    top: 15vh;
 
     // left: 33%;
     width: 100%;
@@ -143,12 +174,6 @@ body {
 h1 {
     font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: white;
-    padding: 10px 60px;
-    font-size: 69px !important;
-
-    //text-shadow: 2px 3px 3px #afa6a6;
-    border: 1px solid white;
-    box-shadow: 2px 2px #af9797;
 }
 
 .layer-1 {
@@ -161,9 +186,9 @@ h1 {
 
 .layer-2 {
     //top: 287px;
-    top: 28vh;
+    top: 30vh;
     z-index: 5;
-    background-image: url("../../port/img/fw-back-mountains.png");
+    background-image: url("../../port/img//fw-back-mountains.png");
 
     //background-size: 100% 340px;
     background-size: 110% 35vh;
@@ -173,9 +198,9 @@ h1 {
 
 .layer-3 {
     //top: 405px;
-    top: 44vh;
+    top: 45vh;
     z-index: 10;
-    background-image: url("../../port/img/middle-mountain22.png");
+    background-image: url("../../port/img//middle-mountain22.png");
     background-repeat: no-repeat;
 
     //background-size: 54% 300px;
@@ -185,9 +210,9 @@ h1 {
 
 .layer-4 {
     // top: 350px;
-    top: 34vh;
+    top: 36vh;
     z-index: 15;
-    background-image: url("../../port/img/fw-side-mountains.png");
+    background-image: url("../../port/img//fw-side-mountains.png");
 
     //background-size: 100% 310px;
     background-size: 110% 36vh;
@@ -197,12 +222,12 @@ h1 {
 
 .layer-5 {
     //top: 527px;
-    top: 51vh;
+    top: 55vh;
     z-index: 20;
-    background-image: url("../../port/img/fw-back-hills.png");
+    background-image: url("../../port/img//fw-back-hills.png");
 
     //background-size: 100% 300px;
-    background-size: 110% 30vh;
+    background-size: 110% 32vh;
     background-repeat: no-repeat;
     left: -5%;
     width: 110%;
@@ -210,9 +235,9 @@ h1 {
 
 .layer-6 {
     //top: 520px;
-    top: 53vh;
+    top: 55vh;
     z-index: 25;
-    background-image: url("../../port/img/fw-font-mountains.png");
+    background-image: url("../../port/img//fw-font-mountains.png");
 
     //background-size: 100% 290px;
     background-size: 110% 34vh;
@@ -289,28 +314,29 @@ body {
 
 .work-experience, .about {
     .job-container, .about-container {
-        width: 425px;
+        width: 70%;
         display: block;
         margin: 60px auto;
+        min-width: 425px;
     }
 
     h2 {
         color: white;
         font-family: AurulentSans-Bold;
-        font-size: 24px;
+        font-size: 3vw;
     }
 
     .job {
         h3 {
             color: #e74c3c;
             font-family: AurulentSans-Bold;
-            font-size: 28px;
+            font-size: 2vw;
             margin-bottom: 6px;
         }
 
         h4 {
             font-family: AurulentSans;
-            font-size: 18px;
+            font-size: 1.4vw;
             color: white;
             margin-bottom: 6px;
         }
@@ -318,6 +344,7 @@ body {
         p {
             font-family: AurulentSans;
             color: white;
+            font-size: 1vw;
         }
     }
 }
@@ -330,7 +357,7 @@ body {
         h2 {
             color: white;
             font-family: AurulentSans-Bold;
-            font-size: 24px;
+            font-size: 3vw;
             text-align: center;
         }
 
@@ -339,7 +366,7 @@ body {
 
             h4 {
                 font-family: AurulentSans-Bold;
-                font-size: 28px;
+                font-size: 2vw;
                 color: white;
                 margin-bottom: 6px;
                 color: #f1c40f;
@@ -348,6 +375,7 @@ body {
             p {
                 font-family: AurulentSans;
                 color: white;
+                font-size: 1vw;
             }
         }
     }
@@ -420,6 +448,7 @@ body {
     p {
         color: white;
         font-family: AurulentSans;
+        font-size: 1vw;
     }
 }
 
@@ -433,155 +462,633 @@ body {
     display: none;
 }
 
-.works{
+.works {
     padding: 40px;
     width: 100%;
-    .DA, .sitter, .game{
-	overflow: hidden;
-	display: table;
-	max-width: 1220px;
-	width: 100%;
-	margin: 40px auto;
-	height: 309px;
-	.work-img-da{
-	    //width: 40%;
-	    background-size: cover;
-	    background-repeat: no-repeat;
-	    -webkit-transform: scale(1,1);
-	    -ms-transform: scale(1,1);
-	    transform: scale(1,1);
-	    background-image: url("../../port/img/digital1.jpg");
-	    float: none;
-	}
-	.work-img-sit{
-	    //width: 40%;
-	    background-size: cover;
-	    background-repeat: no-repeat;
-	    -webkit-transform: scale(1,1);
-	    -ms-transform: scale(1,1);
-	    transform: scale(1,1);
-	    background-image: url("../../port/img/sitter1.jpg");
 
-	    float: none;
-	}
-	.work-img-game{
-	    //width: 40%;
-	    background-size: cover;
-	    background-repeat: no-repeat;
-	    -webkit-transform: scale(1,1);
-	    -ms-transform: scale(1,1);
-	    transform: scale(1,1);
-	    background-image: url("../../port/img/newest1.jpg");
-	    float: none;
+    .DA, .sitter, .game {
+        //overflow: hidden;
+        display: table;
+        max-width: 1280px;
+        width: 100%;
+        margin: 40px auto 40px auto;
+        height: 309px;
 
-	}
-	.work-about-da{
-	    //width: 40%;
-	    background-color: #fff;
-	    padding: 4% 8%;
-	    border-left: 10px solid #e74c3c;
-	    float: none;
-	    h3{
-		font-size: 2rem;
-		font-family: AurulentSans-Bold;
+        .work-img-da {
+            //width: 40%;
+            background-size: cover;
+            background-repeat: no-repeat;
 
-	    }
-	    p{
-		font-family: AurulentSans;
-		font-size: 0.8em;
-	    }
-	}
-	.work-about-sit{
-	    //width: 40%;
-	    background-color: #fff;
-	    padding: 4% 8%;
-	    border-left: 10px solid #f1c40f;
-	    float: none;
-	    h3{
-		font-size: 2rem;
-		font-family: AurulentSans-Bold;
-	    }
-	    p{
-		font-family: AurulentSans;
-		font-size: 0.8em;
-	    }
-	}
-	.work-about-game{
-	    //width: 40%;
-	    background-color: #fff;
-	    padding: 4% 8%;
-	    border-left: 10px solid #e74c3c;
-	    float: none;
-	    h3{
-		font-size: 2.6rem;
-		font-family: AurulentSans-Bold;
-	    }
-	    p{
-		font-family: AurulentSans;
-		font-size: 0.8em;
-	    }
-	}
+            //-webkit-transform: scale(1, 1);
+            //-ms-transform: scale(1, 1);
+            //transform: scale(1, 1);
+            background-image: url("../img/digital1.jpg");
+            float: none;
+            left: -13rem;
+
+            // animation: slideRight 1s 1;
+       
+        }
+
+        .work-img-sit {
+            //width: 40%;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            //-webkit-transform: scale(1, 1);
+            //-ms-transform: scale(1, 1);
+            //transform: scale(1, 1);
+            background-image: url("../img/sitter1.jpg");
+            float: none;
+            left: -13rem;
+
+            //animation: slideRight 1s 1;
+       
+        }
+
+        .work-img-game {
+            //width: 40%;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            //-webkit-transform: scale(1, 1);
+            //-ms-transform: scale(1, 1);
+            //transform: scale(1, 1);
+            background-image: url("../img/newest1.jpg");
+            float: none;
+            left: -13rem;
+
+            // animation: slideRight 1s 5 forwards;
+       
+        }
+
+        .work-img-game:hover, .work-img-sit:hover, .work-img-da:hover {
+            // background-size: contain;
+            // background-repeat: no-repeat;
+       
+        }
+
+        .work-about-da {
+            //width: 40%;
+            background-color: #fff;
+            padding: 4% 8%;
+            border-left: 10px solid #e74c3c;
+            float: none;
+
+            //left: 13rem;
+            //animation: slideLeft 1s 5 forwards;
+
+            h3 {
+                font-size: 2rem;
+                font-family: AurulentSans-Bold;
+            }
+
+            p {
+                font-family: AurulentSans;
+                font-size: 0.8em;
+            }
+        }
+
+        .work-about-sit {
+            //width: 40%;
+            background-color: #fff;
+            padding: 4% 8%;
+            border-left: 10px solid #f1c40f;
+            float: none;
+
+            //left: 13rem;
+
+            //animation: slideLeft 1s 1;
+
+            h3 {
+                font-size: 2rem;
+                font-family: AurulentSans-Bold;
+            }
+
+            p {
+                font-family: AurulentSans;
+                font-size: 0.8em;
+            }
+        }
+
+        .work-about-game {
+            //width: 40%;
+            background-color: #fff;
+            padding: 4% 8%;
+            border-left: 10px solid #e74c3c;
+            float: none;
+
+            //left: 13rem;
+
+            //animation: slideLeft 1s 1;
+
+            h3 {
+                font-size: 2.6rem;
+                font-family: AurulentSans-Bold;
+            }
+
+            p {
+                font-family: AurulentSans;
+                font-size: 0.8em;
+            }
+        }
     }
 }
-.DA>div, .sitter>div, .game>div {
-    display: table-cell;
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #1f1f1f;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+$vertPad: 80px;
+$sidePad: 70px;
+
+$numOfEls: 4;
+$elMrg: 1%;
+
+$initAT: 1s;
+$initDelayStep: 0.1s;
+$fullInitAT: $initAT + $initDelayStep * ($numOfEls - 1);
+$moveAT: 0.6s;
+$expandAT: 0.7s;
+$expandDelay: 0.1s;
+$bgScaleAT: 0.8s;
+$fadeoutAT: $moveAT + $expandAT / 2;
+$indexHoverAT: 0.5s;
+$closeBtnAT: 0.3s;
+$closeBtnLineDelay: 0.15s;
+$fullExpandAT: $moveAT + $expandDelay + $expandAT;
+$contentFadeinAT: 0.5s;
+
+@mixin elHover {
+    .el:hover & {
+        @content;
+    }
+}
+
+@mixin elActive {
+    .el.s--active & {
+        @content;
+    }
+}
+
+@mixin contInactive {
+    .cont.s--inactive & {
+        @content;
+    }
+}
+
+@mixin contElActive {
+    .cont.s--el-active & {
+        @content;
+    }
+}
+
+.cont {
     position: relative;
+    overflow: hidden;
+    height: calc(100vw/2);
+    padding: $vertPad $sidePad;
+
+    &__inner {
+        position: relative;
+        height: 100%;
+
+        &:hover .el__bg:after {
+            opacity: 1;
+        }
+    }
+}
+
+.el {
+    $elW: (100% - $elMrg * ($numOfEls - 1)) / $numOfEls;
+    $elMrgRel: percentage($elMrg / $elW);
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: $elW + 8;
+    height: 100%;
+    background: #252525;
+    transition: transform $moveAT $expandAT, width $expandAT, opacity $moveAT $expandAT, z-index 0s ($moveAT + $expandAT);
+    will-change: transform, width, opacity;
+
+    &:not(.s--active) {
+        cursor: pointer;
+    }
+
+    &__overflow {
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+    }
+
+    &__inner {
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+        transition: transform $initAT;
+
+        @include contInactive {
+            transform: translate3d(0, 100%, 0);
+        }
+    }
+
+    &__bg {
+        position: relative;
+        width: calc(100vw - #{$sidePad * 2});
+        height: 100%;
+        transition: transform $moveAT $expandAT;
+        will-change: transform;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+
+            //top: -5%;
+            width: 100%;
+            height: 110%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            transition: transform $initAT;
+            transform: translate3d(0, 0, 0) scale(1);
+
+            @include contInactive {
+                transform: translate3d(0, -100%, 0) scale(1.2);
+            }
+
+
+            @include elActive {
+                transition: transform $bgScaleAT;
+            }
+        }
+
+        &:after {
+            $opacityAT: 0.5s;
+
+            content: "";
+            z-index: 1;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity $opacityAT;
+
+            @include contElActive {
+                transition: opacity $opacityAT $fullExpandAT;
+                opacity: 1 !important;
+            }
+        }
+    }
+
+    &__preview-cont {
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 0.3s ($fullInitAT - 0.2s);
+
+        @include contInactive {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+
+        @include contElActive {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.5s;
+        }
+    }
+
+    &__heading-background {
+        width: 100%;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.31);
+    }
+
+    &__heading {
+        color: white;
+        text-transform: uppercase;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.56);
+        font-size: 2vw;
+        font-family: AurulentSans-Bold;
+        width: initial;
+        margin: 0;
+        padding: 20px 0;
+    }
+
+    &__content {
+        z-index: -1;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 60px;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.1s;
+
+        @include elActive {
+            z-index: 2;
+            opacity: 1;
+            pointer-events: auto;
+            transition: all $contentFadeinAT $fullExpandAT;
+        }
+    }
+
+    &__text {
+        text-transform: uppercase;
+        font-size: 2.4vw;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.63);
+        color: #fff;
+    }
+
+    &__close-btn {
+        z-index: -1;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 60px;
+        height: 60px;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0s ($closeBtnAT + $closeBtnLineDelay);
+        cursor: pointer;
+
+        @include elActive {
+            z-index: 5;
+            opacity: 1;
+            pointer-events: auto;
+            transition: all 0s $fullExpandAT;
+        }
+
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height: 8px;
+            margin-top: -4px;
+            background: #fff;
+            opacity: 0;
+            transition: opacity 0s;
+
+            @include elActive {
+                opacity: 1;
+            }
+        }
+
+        &:before {
+            transform: rotate(45deg) translateX(100%);
+
+            @include elActive {
+                transition: all $closeBtnAT $fullExpandAT cubic-bezier(0.72, 0.09, 0.32, 1.57);
+                transform: rotate(45deg) translateX(0);
+            }
+        }
+
+        &:after {
+            transform: rotate(-45deg) translateX(100%);
+
+            @include elActive {
+                transition: all $closeBtnAT ($fullExpandAT + $closeBtnLineDelay) cubic-bezier(0.72, 0.09, 0.32, 1.57);
+                transform: rotate(-45deg) translateX(0);
+            }
+        }
+    }
+
+    &__index {
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        bottom: $vertPad * -1;
+        width: 100%;
+        height: 100%;
+        min-height: 250px;
+        text-align: center;
+        font-size: 100vw / $numOfEls;
+        line-height: 0.85;
+        font-weight: bold;
+        transition: transform $indexHoverAT, opacity ($moveAT / 2) ($expandAT + $expandDelay + $moveAT);
+        transform: translate3d(0, 1vw, 0);
+
+        @include elHover {
+            transform: translate3d(0, 0, 0);
+        }
+
+
+        @include contElActive {
+            transition: transform $indexHoverAT, opacity ($moveAT / 2);
+            opacity: 0;
+        }
+
+
+        &-back,
+        &-front {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        &-back {
+            color: #2f3840;
+            opacity: 0;
+            transition: opacity ($indexHoverAT / 2) ($indexHoverAT / 2);
+
+            @include elHover {
+                transition: opacity ($indexHoverAT / 2);
+                opacity: 1;
+            }
+        }
+
+        &-overlay {
+            overflow: hidden;
+            position: relative;
+            transform: translate3d(0, 100%, 0);
+            transition: transform $indexHoverAT 0.1s;
+            color: transparent;
+
+            &:before {
+                content: attr(data-index);
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                color: #fff;
+                transform: translate3d(0, -100%, 0);
+                transition: transform $indexHoverAT 0.1s;
+            }
+
+            @include elHover {
+                transform: translate3d(0, 0, 0);
+
+                &:before {
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+        }
+    }
+
+    @for $i from 0 to $numOfEls {
+        &:nth-child(#{$i + 1}) {
+            $x: (100% + $elMrgRel) * $i;
+
+            transform: translate3d($x, 0, 0);
+            transform-origin: ($x + 50%) 50%;
+
+            @include contElActive {
+                &:not(.s--active) {
+                    transform: scale(0.5) translate3d($x, 0, 0);
+                    opacity: 0;
+                    transition: transform $fadeoutAT, opacity $fadeoutAT;
+                }
+            }
+
+
+            .el__inner {
+                transition-delay: $initDelayStep * $i;
+            }
+
+            .el__bg {
+                transform: translate3d($elW * $i * -1, 0, 0);
+
+                &:before {
+                    transition-delay: 0.1s * $i;
+                    background-image: url("../img/work-#{$i + 1}.jpg");
+                }
+            }
+        }
+    }
+
+    &:hover {
+        .el__bg:after {
+            opacity: 0;
+        }
+    }
+
+    &.s--active {
+        z-index: 1;
+        width: 100%;
+        transform: translate3d(0, 0, 0);
+        transition: transform $moveAT, width $expandAT ($moveAT + $expandDelay), z-index 0s;
+
+        .el__bg {
+            transform: translate3d(0, 0, 0);
+            transition: transform $moveAT;
+
+            &:before {
+                transition-delay: $moveAT;
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+.icon-link {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    width: 32px;
+
+    img {
+        width: 100%;
+        vertical-align: top;
+    }
+
+    &--twitter {
+        left: auto;
+        right: 5px;
+    }
 }
 
 //For browsers
 @media (#{$bp-larger-than-tablet}) {
     .work-experience, .about {
-	.job-container, .about-container {
-	    width: 100%;
-	    padding: 0 15px;
-	}
+        .job-container, .about-container {
+            width: 100%;
+            padding: 0 15px;
+        }
     }
-    .work-img-da{
-	width: 100%;
-    }
-    .work-img-sit{
-	width: 100%;
-    }
-    .work-img-game{
-	width: 100%;
-    }
-    .work-about-da{
-	width: 100%;
-	background-color: #fff;
-	h3{
-	    font-size: 2rem;
-	    font-family: AurulentSans-Bold;
 
-	}
-	p{
-	    font-family: AurulentSans;
-	    font-size: 0.8em;
-	}
+    .work-img-da {
+        width: 100%;
     }
-    .work-about-sit{
-	width: 100%;
-	background-color: #fff;
-	float: none;
-	h3{
-	    font-size: 2rem;
-	    font-family: AurulentSans-Bold;
-	}
-	p{
-	    font-family: AurulentSans;
-	    font-size: 0.8em;
-	}
+
+    .work-img-sit {
+        width: 100%;
     }
-    .work-about-game{
-	width: 100%;
-	background-color: #fff;
-	h3{
-	    font-size: 2.6rem;
-	    font-family: AurulentSans-Bold;
-	}
-	p{
-	    font-family: AurulentSans;
-	    font-size: 0.8em;
-	}
+
+    .work-img-game {
+        width: 100%;
+    }
+
+    .work-about-da {
+        width: 100%;
+        background-color: #fff;
+
+        h3 {
+            font-size: 2rem;
+            font-family: AurulentSans-Bold;
+        }
+
+        p {
+            font-family: AurulentSans;
+            font-size: 0.8em;
+        }
+    }
+
+    .work-about-sit {
+        width: 100%;
+        background-color: #fff;
+        float: none;
+
+        h3 {
+            font-size: 2rem;
+            font-family: AurulentSans-Bold;
+        }
+
+        p {
+            font-family: AurulentSans;
+            font-size: 0.8em;
+        }
+    }
+
+    .work-about-game {
+        width: 100%;
+        background-color: #fff;
+
+        h3 {
+            font-size: 2.6rem;
+            font-family: AurulentSans-Bold;
+        }
+
+        p {
+            font-family: AurulentSans;
+            font-size: 0.8em;
+        }
     }
 }
 
@@ -594,7 +1101,7 @@ body {
 
     body {
         overflow: visible;
-	width: 100%;
+        width: 100%;
     }
 
     .no-parallax {
@@ -630,7 +1137,7 @@ body {
         clear: both;
         overflow: hidden;
         top: 0;
-	width: 100%;
+        width: 100%;
     }
 
     .social-container {
@@ -689,69 +1196,80 @@ body {
             padding: 10px 20px !important;
         }
     }
-    .work-img-da{
-	width: 100% !important;
-	height: 240px;
-	display: block !important;
-	border-left: 0 !important;
-    }
-    .work-img-sit{
-	width: 100% !important;
-	height: 240px;
-	display: block !important;
-	border-left: 0 !important;
-    }
-    .work-img-game{
-	width: 100% !important;
-	height: 240px;
-	display: block !important;
-	border-left: 0 !important;
-    }
-    .work-about-da{
-	width: 100% !important;
-	border-top: 10px solid #e74c3c;
-	margin-left: 0 !important;
-	display: block !important;
-	border-left: 0 !important;
-	h3{
-	    font-size: 2rem;
-	    font-family: AurulentSans-Bold;
 
-	}
-	p{
-	    font-family: AurulentSans;
-	    font-size: 0.8em;
-	}
+    .work-img-da {
+        width: 100% !important;
+        height: 240px;
+        display: block !important;
+        border-left: 0 !important;
     }
-    .work-about-sit{
-	width: 100% !important;
-	border-top: 10px solid #f1c40f;
-	margin-left: 0 !important;
-	display: block !important;
-	border-left: 0 !important;
-	h3{
-	    font-size: 2rem;
-	    font-family: AurulentSans-Bold;
-	}
-	p{
-	    font-family: AurulentSans;
-	    font-size: 0.8em;
-	}
+
+    .work-img-sit {
+        width: 100% !important;
+        height: 240px;
+        display: block !important;
+        border-left: 0 !important;
     }
-    .work-about-game{
-	width: 100% !important;
-	border-top: 10px solid #e74c3c;
-	margin-left: 0 !important;
-	display: block !important;
-	border-left: 0 !important;
-	h3{
-	    font-size: 2.6rem;
-	    font-family: AurulentSans-Bold;
-	}
-	p{
-	    font-family: AurulentSans;
-	    font-size: 0.8em;
-	}
+
+    .work-img-game {
+        width: 100% !important;
+        height: 240px;
+        display: block !important;
+        border-left: 0 !important;
+    }
+
+    .work-about-da {
+        width: 100% !important;
+        border-top: 10px solid #e74c3c;
+        margin-left: 0 !important;
+        display: block !important;
+        border-left: 0 !important;
+
+        h3 {
+            font-size: 2rem;
+            font-family: AurulentSans-Bold;
+        }
+
+        p {
+            font-family: AurulentSans;
+            font-size: 0.8em;
+        }
+    }
+
+    .work-about-sit {
+        width: 100% !important;
+        border-top: 10px solid #f1c40f;
+        margin-left: 0 !important;
+        display: block !important;
+        border-left: 0 !important;
+
+        h3 {
+            font-size: 2rem;
+            font-family: AurulentSans-Bold;
+        }
+
+        p {
+            font-family: AurulentSans;
+            font-size: 0.8em;
+        }
+    }
+
+    .work-about-game {
+        width: 100% !important;
+        border-top: 10px solid #e74c3c;
+        margin-left: 0 !important;
+        display: block !important;
+        border-left: 0 !important;
+
+        h3 {
+            font-size: 2.6rem;
+            font-family: AurulentSans-Bold;
+        }
+
+        p {
+            font-family: AurulentSans;
+            font-size: 0.8em;
+        }
     }
 }
 
@@ -802,69 +1320,80 @@ body {
         background-size: 100% 200px;
         top: 240px;
     }
-    .work-img-da{
-	width: 100% !important;
-	height: 240px;
-	display: block !important;
-	border-left: 0 !important;
-    }
-    .work-img-sit{
-	width: 100% !important;
-	height: 240px;
-	display: block !important;
-	border-left: 0 !important;
-    }
-    .work-img-game{
-	width: 100% !important;
-	height: 240px;
-	display: block !important;
-	border-left: 0 !important;
-    }
-    .work-about-da{
-	width: 100% !important;
-	border-top: 10px solid #e74c3c;
-	margin-left: 0 !important;
-	display: block !important;
-	border-left: 0 !important;
-	h3{
-	    font-size: 2rem;
-	    font-family: AurulentSans-Bold;
 
-	}
-	p{
-	    font-family: AurulentSans;
-	    font-size: 0.8em;
-	}
+    .work-img-da {
+        width: 100% !important;
+        height: 240px;
+        display: block !important;
+        border-left: 0 !important;
     }
-    .work-about-sit{
-	width: 100% !important;
-	border-top: 10px solid #f1c40f;
-	margin-left: 0 !important;
-	display: block !important;
-	border-left: 0 !important;
-	h3{
-	    font-size: 2rem;
-	    font-family: AurulentSans-Bold;
-	}
-	p{
-	    font-family: AurulentSans;
-	    font-size: 0.8em;
-	}
+
+    .work-img-sit {
+        width: 100% !important;
+        height: 240px;
+        display: block !important;
+        border-left: 0 !important;
     }
-    .work-about-game{
-	width: 100% !important;
-	border-top: 10px solid #e74c3c;
-	margin-left: 0 !important;
-	display: block !important;
-	border-left: 0 !important;
-	h3{
-	    font-size: 2.6rem;
-	    font-family: AurulentSans-Bold;
-	}
-	p{
-	    font-family: AurulentSans;
-	    font-size: 0.8em;
-	}
+
+    .work-img-game {
+        width: 100% !important;
+        height: 240px;
+        display: block !important;
+        border-left: 0 !important;
+    }
+
+    .work-about-da {
+        width: 100% !important;
+        border-top: 10px solid #e74c3c;
+        margin-left: 0 !important;
+        display: block !important;
+        border-left: 0 !important;
+
+        h3 {
+            font-size: 2rem;
+            font-family: AurulentSans-Bold;
+        }
+
+        p {
+            font-family: AurulentSans;
+            font-size: 0.8em;
+        }
+    }
+
+    .work-about-sit {
+        width: 100% !important;
+        border-top: 10px solid #f1c40f;
+        margin-left: 0 !important;
+        display: block !important;
+        border-left: 0 !important;
+
+        h3 {
+            font-size: 2rem;
+            font-family: AurulentSans-Bold;
+        }
+
+        p {
+            font-family: AurulentSans;
+            font-size: 0.8em;
+        }
+    }
+
+    .work-about-game {
+        width: 100% !important;
+        border-top: 10px solid #e74c3c;
+        margin-left: 0 !important;
+        display: block !important;
+        border-left: 0 !important;
+
+        h3 {
+            font-size: 2.6rem;
+            font-family: AurulentSans-Bold;
+        }
+
+        p {
+            font-family: AurulentSans;
+            font-size: 0.8em;
+        }
     }
 }
 
@@ -877,7 +1406,7 @@ body {
 
     body {
         overflow: visible;
-	width: 100%;
+        width: 100%;
     }
 
     .no-parallax {
@@ -913,7 +1442,7 @@ body {
         clear: both;
         overflow: hidden;
         top: 0;
-	width: 100%;
+        width: 100%;
     }
 
     .social-container {
@@ -1006,68 +1535,79 @@ body {
         //top: 110vh;
    
     }
-    .work-img-da{
-	width: 100% !important;
-	height: 240px;
-	display: block !important;
-	border-left: 0 !important;
-    }
-    .work-img-sit{
-	width: 100% !important;
-	height: 240px;
-	display: block !important;
-	border-left: 0 !important;
-    }
-    .work-img-game{
-	width: 100% !important;
-	height: 240px;
-	display: block !important;
-	border-left: 0 !important;
-    }
-    .work-about-da{
-	width: 100% !important;
-	border-top: 10px solid #e74c3c;
-	margin-left: 0 !important;
-	display: block !important;
-	border-left: 0 !important;
-	h3{
-	    font-size: 2rem;
-	    font-family: AurulentSans-Bold;
 
-	}
-	p{
-	    font-family: AurulentSans;
-	    font-size: 0.8em;
-	}
+    .work-img-da {
+        width: 100% !important;
+        height: 240px;
+        display: block !important;
+        border-left: 0 !important;
     }
-    .work-about-sit{
-	width: 100% !important;
-	border-top: 10px solid #f1c40f;
-	margin-left: 0 !important;
-	display: block !important;
-	border-left: 0 !important;
-	h3{
-	    font-size: 2rem;
-	    font-family: AurulentSans-Bold;
-	}
-	p{
-	    font-family: AurulentSans;
-	    font-size: 0.8em;
-	}
+
+    .work-img-sit {
+        width: 100% !important;
+        height: 240px;
+        display: block !important;
+        border-left: 0 !important;
     }
-    .work-about-game{
-	width: 100% !important;
-	border-top: 10px solid #e74c3c;
-	margin-left: 0 !important;
-	display: block !important;
-	border-left: 0 !important;
-	h3{
-	    font-size: 2.6rem;
-	    font-family: AurulentSans-Bold;
-	}
-	p{
-	    font-family: AurulentSans;
-	    font-size: 0.8em;
-	}
+
+    .work-img-game {
+        width: 100% !important;
+        height: 240px;
+        display: block !important;
+        border-left: 0 !important;
+    }
+
+    .work-about-da {
+        width: 100% !important;
+        border-top: 10px solid #e74c3c;
+        margin-left: 0 !important;
+        display: block !important;
+        border-left: 0 !important;
+
+        h3 {
+            font-size: 2rem;
+            font-family: AurulentSans-Bold;
+        }
+
+        p {
+            font-family: AurulentSans;
+            font-size: 0.8em;
+        }
+    }
+
+    .work-about-sit {
+        width: 100% !important;
+        border-top: 10px solid #f1c40f;
+        margin-left: 0 !important;
+        display: block !important;
+        border-left: 0 !important;
+
+        h3 {
+            font-size: 2rem;
+            font-family: AurulentSans-Bold;
+        }
+
+        p {
+            font-family: AurulentSans;
+            font-size: 0.8em;
+        }
+    }
+
+    .work-about-game {
+        width: 100% !important;
+        border-top: 10px solid #e74c3c;
+        margin-left: 0 !important;
+        display: block !important;
+        border-left: 0 !important;
+
+        h3 {
+            font-size: 2.6rem;
+            font-family: AurulentSans-Bold;
+        }
+
+        p {
+            font-family: AurulentSans;
+            font-size: 0.8em;
+        }
     }
 }
