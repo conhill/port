@@ -195,7 +195,6 @@ body {
   padding: 10px;
   background-color: #353E43;
   transition: all 0.25s ease-in-out;
-  height: 20px;
   z-index: 21; }
   #header.scrolled {
     background-color: #DFE4E8; }
@@ -633,7 +632,7 @@ body {
 @media (max-width: 950px) {
   .work-experience .job-container, .work-experience .about-container, .about .job-container, .about .about-container {
     width: 100%;
-    padding: 0 15px; } }
+    padding: 0 50px 0 15px; } }
 @media (max-width: 600px) {
   .nav-items li {
     font-size: 12px; }

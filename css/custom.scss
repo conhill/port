@@ -260,7 +260,6 @@ body {
     padding: 10px;
     background-color: #353E43;
     transition: all 0.25s ease-in-out;
-    height: 20px;
     z-index: 21;
 
     &.scrolled {
@@ -865,7 +864,7 @@ body {
     .work-experience, .about {
         .job-container, .about-container {
             width: 100%;
-            padding: 0 15px;
+            padding: 0 50px 0 15px;
         }
     }
 }
