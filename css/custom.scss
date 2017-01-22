@@ -1,6 +1,26 @@
 $bp-larger-than-mobile: "max-width: 600px" !default;
 $bp-larger-than-tablet: "max-width: 950px" !default;
 
+$vertPad: 80px;
+$sidePad: 70px;
+
+$numOfEls: 4;
+$elMrg: 1%;
+
+$initAT: 1s;
+$initDelayStep: 0.1s;
+$fullInitAT: $initAT + $initDelayStep * ($numOfEls - 1);
+$moveAT: 0.6s;
+$expandAT: 0.7s;
+$expandDelay: 0.1s;
+$bgScaleAT: 0.8s;
+$fadeoutAT: $moveAT + $expandAT / 2;
+$indexHoverAT: 0.5s;
+$closeBtnAT: 0.3s;
+$closeBtnLineDelay: 0.15s;
+$fullExpandAT: $moveAT + $expandDelay + $expandAT;
+$contentFadeinAT: 0.5s;
+
 @font-face {
     font-family: AurulentSans;
     src: url(../../port/font/AurulentSans-Regular.otf);
@@ -45,8 +65,6 @@ body {
     margin: 0;
     height: 100vh;
     overflow: hidden;
-
-    /* overflow-x: hidden !important; */
     display: block;
     position: absolute;
 }
@@ -58,8 +76,6 @@ body.loaded {
 .loaded {
     position: relative;
     overflow: visible;
-
-    //visibility: hidden;
 }
 
 .wrapper {
@@ -99,21 +115,16 @@ body.loaded {
 }
 
 @keyframes color-me-in {
-    /* You could think of as "step 1" */
     0% {
         color: #252a60;
     }
 
-    /* You could think of as "step 2" */
     100% {
         color: white;
     }
 }
 
 .loader.loaded {
-    // opacity: 0;
-    //visibility: hidden;
-    // z-index: -1;
     height: 0px;
     visibility: hidden;
 }
@@ -146,27 +157,17 @@ body.loaded {
     background-size: 960px 253px;
     transform: translateY(var(--translateY)) translateX(var(--translateX));
     transform: translateY(var(--translateY)), translateX(var(--translateX));
-
-    //transform: translateY(var(--translateY));
     will-change: transform;
 }
 
 .parallax-layer.layer-0 {
-    //top: 110px;
     top: 15vh;
-
-    // left: 33%;
     width: 100%;
     height: 10%;
     display: block;
-
-    // position: relative;
     margin: 0 auto;
     z-index: 6;
     text-align: center;
-
-    //background-image: url('../Portfolio/img/conHill.png');
-    //background-size: 100% 300px;
     background-size: 100% 35vh;
     background-repeat: no-repeat;
 }
@@ -177,7 +178,6 @@ h1 {
 }
 
 .layer-1 {
-    //top: -30px;
     z-index: 5;
     background-repeat: no-repeat;
     background: linear-gradient(#75a5db, #d0ceda);
@@ -185,48 +185,36 @@ h1 {
 }
 
 .layer-2 {
-    //top: 287px;
     top: 30vh;
     z-index: 5;
     background-image: url("../../port/img//fw-back-mountains.png");
-
-    //background-size: 100% 340px;
     background-size: 110% 35vh;
     background-repeat: no-repeat;
     left: -3%;
 }
 
-.layer-3 {
-    //top: 405px;
+.layer-3 {;
     top: 45vh;
     z-index: 10;
     background-image: url("../../port/img//middle-mountain22.png");
     background-repeat: no-repeat;
-
-    //background-size: 54% 300px;
     background-size: 58% 35vh;
     left: 3vw;
 }
 
 .layer-4 {
-    // top: 350px;
     top: 36vh;
     z-index: 15;
     background-image: url("../../port/img//fw-side-mountains.png");
-
-    //background-size: 100% 310px;
     background-size: 110% 36vh;
     background-repeat: no-repeat;
     left: -4%;
 }
 
 .layer-5 {
-    //top: 527px;
     top: 55vh;
     z-index: 20;
     background-image: url("../../port/img//fw-back-hills.png");
-
-    //background-size: 100% 300px;
     background-size: 110% 32vh;
     background-repeat: no-repeat;
     left: -5%;
@@ -234,15 +222,10 @@ h1 {
 }
 
 .layer-6 {
-    //top: 520px;
     top: 55vh;
     z-index: 25;
     background-image: url("../../port/img//fw-font-mountains.png");
-
-    //background-size: 100% 290px;
     background-size: 110% 34vh;
-
-    /* left: 5%; */
     background-repeat: no-repeat;
     left: -7%;
     width: 115%;
@@ -252,9 +235,6 @@ h1 {
     position: absolute;
     top: 100vh;
     background: #00002c;
-
-    //#00183e
-    //00002b
     width: 100%;
     min-height: 1000px;
     z-index: 1000;
@@ -467,131 +447,12 @@ body {
     width: 100%;
 
     .DA, .sitter, .game {
-        //overflow: hidden;
         display: table;
         max-width: 1280px;
         width: 100%;
         margin: 40px auto 40px auto;
         height: 309px;
 
-        .work-img-da {
-            //width: 40%;
-            background-size: cover;
-            background-repeat: no-repeat;
-
-            //-webkit-transform: scale(1, 1);
-            //-ms-transform: scale(1, 1);
-            //transform: scale(1, 1);
-            background-image: url("../img/digital1.jpg");
-            float: none;
-            left: -13rem;
-
-            // animation: slideRight 1s 1;
-       
-        }
-
-        .work-img-sit {
-            //width: 40%;
-            background-size: cover;
-            background-repeat: no-repeat;
-
-            //-webkit-transform: scale(1, 1);
-            //-ms-transform: scale(1, 1);
-            //transform: scale(1, 1);
-            background-image: url("../img/sitter1.jpg");
-            float: none;
-            left: -13rem;
-
-            //animation: slideRight 1s 1;
-       
-        }
-
-        .work-img-game {
-            //width: 40%;
-            background-size: cover;
-            background-repeat: no-repeat;
-
-            //-webkit-transform: scale(1, 1);
-            //-ms-transform: scale(1, 1);
-            //transform: scale(1, 1);
-            background-image: url("../img/newest1.jpg");
-            float: none;
-            left: -13rem;
-
-            // animation: slideRight 1s 5 forwards;
-       
-        }
-
-        .work-img-game:hover, .work-img-sit:hover, .work-img-da:hover {
-            // background-size: contain;
-            // background-repeat: no-repeat;
-       
-        }
-
-        .work-about-da {
-            //width: 40%;
-            background-color: #fff;
-            padding: 4% 8%;
-            border-left: 10px solid #e74c3c;
-            float: none;
-
-            //left: 13rem;
-            //animation: slideLeft 1s 5 forwards;
-
-            h3 {
-                font-size: 2rem;
-                font-family: AurulentSans-Bold;
-            }
-
-            p {
-                font-family: AurulentSans;
-                font-size: 0.8em;
-            }
-        }
-
-        .work-about-sit {
-            //width: 40%;
-            background-color: #fff;
-            padding: 4% 8%;
-            border-left: 10px solid #f1c40f;
-            float: none;
-
-            //left: 13rem;
-
-            //animation: slideLeft 1s 1;
-
-            h3 {
-                font-size: 2rem;
-                font-family: AurulentSans-Bold;
-            }
-
-            p {
-                font-family: AurulentSans;
-                font-size: 0.8em;
-            }
-        }
-
-        .work-about-game {
-            //width: 40%;
-            background-color: #fff;
-            padding: 4% 8%;
-            border-left: 10px solid #e74c3c;
-            float: none;
-
-            //left: 13rem;
-
-            //animation: slideLeft 1s 1;
-
-            h3 {
-                font-size: 2.6rem;
-                font-family: AurulentSans-Bold;
-            }
-
-            p {
-                font-family: AurulentSans;
-                font-size: 0.8em;
-            }
-        }
     }
 }
 
@@ -600,31 +461,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
-body {
-    background: #1f1f1f;
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-}
-
-$vertPad: 80px;
-$sidePad: 70px;
-
-$numOfEls: 4;
-$elMrg: 1%;
-
-$initAT: 1s;
-$initDelayStep: 0.1s;
-$fullInitAT: $initAT + $initDelayStep * ($numOfEls - 1);
-$moveAT: 0.6s;
-$expandAT: 0.7s;
-$expandDelay: 0.1s;
-$bgScaleAT: 0.8s;
-$fadeoutAT: $moveAT + $expandAT / 2;
-$indexHoverAT: 0.5s;
-$closeBtnAT: 0.3s;
-$closeBtnLineDelay: 0.15s;
-$fullExpandAT: $moveAT + $expandDelay + $expandAT;
-$contentFadeinAT: 0.5s;
 
 @mixin elHover {
     .el:hover & {
@@ -1032,64 +868,6 @@ $contentFadeinAT: 0.5s;
             padding: 0 15px;
         }
     }
-
-    .work-img-da {
-        width: 100%;
-    }
-
-    .work-img-sit {
-        width: 100%;
-    }
-
-    .work-img-game {
-        width: 100%;
-    }
-
-    .work-about-da {
-        width: 100%;
-        background-color: #fff;
-
-        h3 {
-            font-size: 2rem;
-            font-family: AurulentSans-Bold;
-        }
-
-        p {
-            font-family: AurulentSans;
-            font-size: 0.8em;
-        }
-    }
-
-    .work-about-sit {
-        width: 100%;
-        background-color: #fff;
-        float: none;
-
-        h3 {
-            font-size: 2rem;
-            font-family: AurulentSans-Bold;
-        }
-
-        p {
-            font-family: AurulentSans;
-            font-size: 0.8em;
-        }
-    }
-
-    .work-about-game {
-        width: 100%;
-        background-color: #fff;
-
-        h3 {
-            font-size: 2.6rem;
-            font-family: AurulentSans-Bold;
-        }
-
-        p {
-            font-family: AurulentSans;
-            font-size: 0.8em;
-        }
-    }
 }
 
 @media (#{$bp-larger-than-mobile}) {
@@ -1140,23 +918,13 @@ $contentFadeinAT: 0.5s;
         width: 100%;
     }
 
-    .social-container {
+    .social-container, .social {
         h3 {
             margin-left: 20px;
         }
 
         p {
             margin-left: 10px;
-        }
-    }
-
-    .social {
-        h3, h4 {
-            margin-left: 10px;
-        }
-
-        p {
-            margin-left: 20px;
         }
     }
 
@@ -1197,80 +965,6 @@ $contentFadeinAT: 0.5s;
         }
     }
 
-    .work-img-da {
-        width: 100% !important;
-        height: 240px;
-        display: block !important;
-        border-left: 0 !important;
-    }
-
-    .work-img-sit {
-        width: 100% !important;
-        height: 240px;
-        display: block !important;
-        border-left: 0 !important;
-    }
-
-    .work-img-game {
-        width: 100% !important;
-        height: 240px;
-        display: block !important;
-        border-left: 0 !important;
-    }
-
-    .work-about-da {
-        width: 100% !important;
-        border-top: 10px solid #e74c3c;
-        margin-left: 0 !important;
-        display: block !important;
-        border-left: 0 !important;
-
-        h3 {
-            font-size: 2rem;
-            font-family: AurulentSans-Bold;
-        }
-
-        p {
-            font-family: AurulentSans;
-            font-size: 0.8em;
-        }
-    }
-
-    .work-about-sit {
-        width: 100% !important;
-        border-top: 10px solid #f1c40f;
-        margin-left: 0 !important;
-        display: block !important;
-        border-left: 0 !important;
-
-        h3 {
-            font-size: 2rem;
-            font-family: AurulentSans-Bold;
-        }
-
-        p {
-            font-family: AurulentSans;
-            font-size: 0.8em;
-        }
-    }
-
-    .work-about-game {
-        width: 100% !important;
-        border-top: 10px solid #e74c3c;
-        margin-left: 0 !important;
-        display: block !important;
-        border-left: 0 !important;
-
-        h3 {
-            font-size: 2.6rem;
-            font-family: AurulentSans-Bold;
-        }
-
-        p {
-            font-family: AurulentSans;
-            font-size: 0.8em;
-        }
-    }
 }
 
 @media handheld, screen and (min-width: 601px) and (max-width: 910px) and (min-device-width: 601px) and (max-device-width: 910px) {
@@ -1321,80 +1015,6 @@ $contentFadeinAT: 0.5s;
         top: 240px;
     }
 
-    .work-img-da {
-        width: 100% !important;
-        height: 240px;
-        display: block !important;
-        border-left: 0 !important;
-    }
-
-    .work-img-sit {
-        width: 100% !important;
-        height: 240px;
-        display: block !important;
-        border-left: 0 !important;
-    }
-
-    .work-img-game {
-        width: 100% !important;
-        height: 240px;
-        display: block !important;
-        border-left: 0 !important;
-    }
-
-    .work-about-da {
-        width: 100% !important;
-        border-top: 10px solid #e74c3c;
-        margin-left: 0 !important;
-        display: block !important;
-        border-left: 0 !important;
-
-        h3 {
-            font-size: 2rem;
-            font-family: AurulentSans-Bold;
-        }
-
-        p {
-            font-family: AurulentSans;
-            font-size: 0.8em;
-        }
-    }
-
-    .work-about-sit {
-        width: 100% !important;
-        border-top: 10px solid #f1c40f;
-        margin-left: 0 !important;
-        display: block !important;
-        border-left: 0 !important;
-
-        h3 {
-            font-size: 2rem;
-            font-family: AurulentSans-Bold;
-        }
-
-        p {
-            font-family: AurulentSans;
-            font-size: 0.8em;
-        }
-    }
-
-    .work-about-game {
-        width: 100% !important;
-        border-top: 10px solid #e74c3c;
-        margin-left: 0 !important;
-        display: block !important;
-        border-left: 0 !important;
-
-        h3 {
-            font-size: 2.6rem;
-            font-family: AurulentSans-Bold;
-        }
-
-        p {
-            font-family: AurulentSans;
-            font-size: 0.8em;
-        }
-    }
 }
 
 @media handheld, screen and (max-width: 600px) and (max-device-width: 600px) {
@@ -1445,23 +1065,13 @@ $contentFadeinAT: 0.5s;
         width: 100%;
     }
 
-    .social-container {
+    .social-container, .social {
         h3 {
             margin-left: 20px;
         }
 
         p {
             margin-left: 10px;
-        }
-    }
-
-    .social {
-        h3, h4 {
-            margin-left: 10px;
-        }
-
-        p {
-            margin-left: 20px;
         }
     }
 
@@ -1493,7 +1103,17 @@ $contentFadeinAT: 0.5s;
             font-size: 22px !important;
         }
     }
-
+    .job-container{
+        h4{
+            font-size: 20px !important;
+        }
+        h3{
+            font-size: 22px !important;
+        }
+        p{
+            font-size: 16px !important;
+        }
+    }
     .layer-0 {
         left: 0 !important;
 
@@ -1531,83 +1151,4 @@ $contentFadeinAT: 0.5s;
         top: 240px;
     }
 
-    .content {
-        //top: 110vh;
-   
-    }
-
-    .work-img-da {
-        width: 100% !important;
-        height: 240px;
-        display: block !important;
-        border-left: 0 !important;
-    }
-
-    .work-img-sit {
-        width: 100% !important;
-        height: 240px;
-        display: block !important;
-        border-left: 0 !important;
-    }
-
-    .work-img-game {
-        width: 100% !important;
-        height: 240px;
-        display: block !important;
-        border-left: 0 !important;
-    }
-
-    .work-about-da {
-        width: 100% !important;
-        border-top: 10px solid #e74c3c;
-        margin-left: 0 !important;
-        display: block !important;
-        border-left: 0 !important;
-
-        h3 {
-            font-size: 2rem;
-            font-family: AurulentSans-Bold;
-        }
-
-        p {
-            font-family: AurulentSans;
-            font-size: 0.8em;
-        }
-    }
-
-    .work-about-sit {
-        width: 100% !important;
-        border-top: 10px solid #f1c40f;
-        margin-left: 0 !important;
-        display: block !important;
-        border-left: 0 !important;
-
-        h3 {
-            font-size: 2rem;
-            font-family: AurulentSans-Bold;
-        }
-
-        p {
-            font-family: AurulentSans;
-            font-size: 0.8em;
-        }
-    }
-
-    .work-about-game {
-        width: 100% !important;
-        border-top: 10px solid #e74c3c;
-        margin-left: 0 !important;
-        display: block !important;
-        border-left: 0 !important;
-
-        h3 {
-            font-size: 2.6rem;
-            font-family: AurulentSans-Bold;
-        }
-
-        p {
-            font-family: AurulentSans;
-            font-size: 0.8em;
-        }
-    }
 }

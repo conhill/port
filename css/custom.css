@@ -29,7 +29,6 @@ body {
   margin: 0;
   height: 100vh;
   overflow: hidden;
-  /* overflow-x: hidden !important; */
   display: block;
   position: absolute; }
 
@@ -72,10 +71,8 @@ body.loaded {
     box-shadow: none; }
 
 @keyframes color-me-in {
-  /* You could think of as "step 1" */
   0% {
     color: #252a60; }
-  /* You could think of as "step 2" */
   100% {
     color: white; } }
 .loader.loaded {
@@ -168,7 +165,6 @@ h1 {
   z-index: 25;
   background-image: url("../../port/img//fw-font-mountains.png");
   background-size: 110% 34vh;
-  /* left: 5%; */
   background-repeat: no-repeat;
   left: -7%;
   width: 115%; }
@@ -336,66 +332,11 @@ body {
     width: 100%;
     margin: 40px auto 40px auto;
     height: 309px; }
-    .works .DA .work-img-da, .works .sitter .work-img-da, .works .game .work-img-da {
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-image: url("../img/digital1.jpg");
-      float: none;
-      left: -13rem; }
-    .works .DA .work-img-sit, .works .sitter .work-img-sit, .works .game .work-img-sit {
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-image: url("../img/sitter1.jpg");
-      float: none;
-      left: -13rem; }
-    .works .DA .work-img-game, .works .sitter .work-img-game, .works .game .work-img-game {
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-image: url("../img/newest1.jpg");
-      float: none;
-      left: -13rem; }
-    .works .DA .work-about-da, .works .sitter .work-about-da, .works .game .work-about-da {
-      background-color: #fff;
-      padding: 4% 8%;
-      border-left: 10px solid #e74c3c;
-      float: none; }
-      .works .DA .work-about-da h3, .works .sitter .work-about-da h3, .works .game .work-about-da h3 {
-        font-size: 2rem;
-        font-family: AurulentSans-Bold; }
-      .works .DA .work-about-da p, .works .sitter .work-about-da p, .works .game .work-about-da p {
-        font-family: AurulentSans;
-        font-size: 0.8em; }
-    .works .DA .work-about-sit, .works .sitter .work-about-sit, .works .game .work-about-sit {
-      background-color: #fff;
-      padding: 4% 8%;
-      border-left: 10px solid #f1c40f;
-      float: none; }
-      .works .DA .work-about-sit h3, .works .sitter .work-about-sit h3, .works .game .work-about-sit h3 {
-        font-size: 2rem;
-        font-family: AurulentSans-Bold; }
-      .works .DA .work-about-sit p, .works .sitter .work-about-sit p, .works .game .work-about-sit p {
-        font-family: AurulentSans;
-        font-size: 0.8em; }
-    .works .DA .work-about-game, .works .sitter .work-about-game, .works .game .work-about-game {
-      background-color: #fff;
-      padding: 4% 8%;
-      border-left: 10px solid #e74c3c;
-      float: none; }
-      .works .DA .work-about-game h3, .works .sitter .work-about-game h3, .works .game .work-about-game h3 {
-        font-size: 2.6rem;
-        font-family: AurulentSans-Bold; }
-      .works .DA .work-about-game p, .works .sitter .work-about-game p, .works .game .work-about-game p {
-        font-family: AurulentSans;
-        font-size: 0.8em; }
 
 *, *:before, *:after {
   box-sizing: border-box;
   margin: 0;
   padding: 0; }
-
-body {
-  background: #1f1f1f;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif; }
 
 .cont {
   position: relative;
@@ -692,47 +633,7 @@ body {
 @media (max-width: 950px) {
   .work-experience .job-container, .work-experience .about-container, .about .job-container, .about .about-container {
     width: 100%;
-    padding: 0 15px; }
-
-  .work-img-da {
-    width: 100%; }
-
-  .work-img-sit {
-    width: 100%; }
-
-  .work-img-game {
-    width: 100%; }
-
-  .work-about-da {
-    width: 100%;
-    background-color: #fff; }
-    .work-about-da h3 {
-      font-size: 2rem;
-      font-family: AurulentSans-Bold; }
-    .work-about-da p {
-      font-family: AurulentSans;
-      font-size: 0.8em; }
-
-  .work-about-sit {
-    width: 100%;
-    background-color: #fff;
-    float: none; }
-    .work-about-sit h3 {
-      font-size: 2rem;
-      font-family: AurulentSans-Bold; }
-    .work-about-sit p {
-      font-family: AurulentSans;
-      font-size: 0.8em; }
-
-  .work-about-game {
-    width: 100%;
-    background-color: #fff; }
-    .work-about-game h3 {
-      font-size: 2.6rem;
-      font-family: AurulentSans-Bold; }
-    .work-about-game p {
-      font-family: AurulentSans;
-      font-size: 0.8em; } }
+    padding: 0 15px; } }
 @media (max-width: 600px) {
   .nav-items li {
     font-size: 12px; }
@@ -773,15 +674,10 @@ body {
     top: 0;
     width: 100%; }
 
-  .social-container h3 {
+  .social-container h3, .social h3 {
     margin-left: 20px; }
-  .social-container p {
+  .social-container p, .social p {
     margin-left: 10px; }
-
-  .social h3, .social h4 {
-    margin-left: 10px; }
-  .social p {
-    margin-left: 20px; }
 
   .parallax-container {
     display: none; }
@@ -806,64 +702,7 @@ body {
   .layer-0 {
     left: 0 !important; }
     .layer-0 h1 {
-      padding: 10px 20px !important; }
-
-  .work-img-da {
-    width: 100% !important;
-    height: 240px;
-    display: block !important;
-    border-left: 0 !important; }
-
-  .work-img-sit {
-    width: 100% !important;
-    height: 240px;
-    display: block !important;
-    border-left: 0 !important; }
-
-  .work-img-game {
-    width: 100% !important;
-    height: 240px;
-    display: block !important;
-    border-left: 0 !important; }
-
-  .work-about-da {
-    width: 100% !important;
-    border-top: 10px solid #e74c3c;
-    margin-left: 0 !important;
-    display: block !important;
-    border-left: 0 !important; }
-    .work-about-da h3 {
-      font-size: 2rem;
-      font-family: AurulentSans-Bold; }
-    .work-about-da p {
-      font-family: AurulentSans;
-      font-size: 0.8em; }
-
-  .work-about-sit {
-    width: 100% !important;
-    border-top: 10px solid #f1c40f;
-    margin-left: 0 !important;
-    display: block !important;
-    border-left: 0 !important; }
-    .work-about-sit h3 {
-      font-size: 2rem;
-      font-family: AurulentSans-Bold; }
-    .work-about-sit p {
-      font-family: AurulentSans;
-      font-size: 0.8em; }
-
-  .work-about-game {
-    width: 100% !important;
-    border-top: 10px solid #e74c3c;
-    margin-left: 0 !important;
-    display: block !important;
-    border-left: 0 !important; }
-    .work-about-game h3 {
-      font-size: 2.6rem;
-      font-family: AurulentSans-Bold; }
-    .work-about-game p {
-      font-family: AurulentSans;
-      font-size: 0.8em; } }
+      padding: 10px 20px !important; } }
 @media handheld, screen and (min-width: 601px) and (max-width: 910px) and (min-device-width: 601px) and (max-device-width: 910px) {
   .job-container {
     width: 100% !important;
@@ -896,64 +735,7 @@ body {
 
   .layer-6 {
     background-size: 100% 200px;
-    top: 240px; }
-
-  .work-img-da {
-    width: 100% !important;
-    height: 240px;
-    display: block !important;
-    border-left: 0 !important; }
-
-  .work-img-sit {
-    width: 100% !important;
-    height: 240px;
-    display: block !important;
-    border-left: 0 !important; }
-
-  .work-img-game {
-    width: 100% !important;
-    height: 240px;
-    display: block !important;
-    border-left: 0 !important; }
-
-  .work-about-da {
-    width: 100% !important;
-    border-top: 10px solid #e74c3c;
-    margin-left: 0 !important;
-    display: block !important;
-    border-left: 0 !important; }
-    .work-about-da h3 {
-      font-size: 2rem;
-      font-family: AurulentSans-Bold; }
-    .work-about-da p {
-      font-family: AurulentSans;
-      font-size: 0.8em; }
-
-  .work-about-sit {
-    width: 100% !important;
-    border-top: 10px solid #f1c40f;
-    margin-left: 0 !important;
-    display: block !important;
-    border-left: 0 !important; }
-    .work-about-sit h3 {
-      font-size: 2rem;
-      font-family: AurulentSans-Bold; }
-    .work-about-sit p {
-      font-family: AurulentSans;
-      font-size: 0.8em; }
-
-  .work-about-game {
-    width: 100% !important;
-    border-top: 10px solid #e74c3c;
-    margin-left: 0 !important;
-    display: block !important;
-    border-left: 0 !important; }
-    .work-about-game h3 {
-      font-size: 2.6rem;
-      font-family: AurulentSans-Bold; }
-    .work-about-game p {
-      font-family: AurulentSans;
-      font-size: 0.8em; } }
+    top: 240px; } }
 @media handheld, screen and (max-width: 600px) and (max-device-width: 600px) {
   .nav-items li {
     font-size: 12px; }
@@ -994,15 +776,10 @@ body {
     top: 0;
     width: 100%; }
 
-  .social-container h3 {
+  .social-container h3, .social h3 {
     margin-left: 20px; }
-  .social-container p {
+  .social-container p, .social p {
     margin-left: 10px; }
-
-  .social h3, .social h4 {
-    margin-left: 10px; }
-  .social p {
-    margin-left: 20px; }
 
   .parallax-container {
     display: none; }
@@ -1023,6 +800,13 @@ body {
 
   .skills h4 {
     font-size: 22px !important; }
+
+  .job-container h4 {
+    font-size: 20px !important; }
+  .job-container h3 {
+    font-size: 22px !important; }
+  .job-container p {
+    font-size: 16px !important; }
 
   .layer-0 {
     left: 0 !important; }
@@ -1047,63 +831,6 @@ body {
 
   .layer-6 {
     background-size: 100% 200px;
-    top: 240px; }
-
-  .work-img-da {
-    width: 100% !important;
-    height: 240px;
-    display: block !important;
-    border-left: 0 !important; }
-
-  .work-img-sit {
-    width: 100% !important;
-    height: 240px;
-    display: block !important;
-    border-left: 0 !important; }
-
-  .work-img-game {
-    width: 100% !important;
-    height: 240px;
-    display: block !important;
-    border-left: 0 !important; }
-
-  .work-about-da {
-    width: 100% !important;
-    border-top: 10px solid #e74c3c;
-    margin-left: 0 !important;
-    display: block !important;
-    border-left: 0 !important; }
-    .work-about-da h3 {
-      font-size: 2rem;
-      font-family: AurulentSans-Bold; }
-    .work-about-da p {
-      font-family: AurulentSans;
-      font-size: 0.8em; }
-
-  .work-about-sit {
-    width: 100% !important;
-    border-top: 10px solid #f1c40f;
-    margin-left: 0 !important;
-    display: block !important;
-    border-left: 0 !important; }
-    .work-about-sit h3 {
-      font-size: 2rem;
-      font-family: AurulentSans-Bold; }
-    .work-about-sit p {
-      font-family: AurulentSans;
-      font-size: 0.8em; }
-
-  .work-about-game {
-    width: 100% !important;
-    border-top: 10px solid #e74c3c;
-    margin-left: 0 !important;
-    display: block !important;
-    border-left: 0 !important; }
-    .work-about-game h3 {
-      font-size: 2.6rem;
-      font-family: AurulentSans-Bold; }
-    .work-about-game p {
-      font-family: AurulentSans;
-      font-size: 0.8em; } }
+    top: 240px; } }
 
 /*# sourceMappingURL=custom.css.map */
