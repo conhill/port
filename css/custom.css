@@ -800,12 +800,16 @@ body {
 
   .skills h4 {
     font-size: 22px !important; }
-
-  .job-container h4 {
+  .skills p {
     font-size: 20px !important; }
-  .job-container h3 {
+
+  .job-container h2, .about h2 {
+    font-size: 28px !important; }
+  .job-container h4, .about h4 {
+    font-size: 20px !important; }
+  .job-container h3, .about h3 {
     font-size: 22px !important; }
-  .job-container p {
+  .job-container p, .about p {
     font-size: 16px !important; }
 
   .layer-0 {
@@ -831,6 +835,19 @@ body {
 
   .layer-6 {
     background-size: 100% 200px;
-    top: 240px; } }
+    top: 240px; }
+
+  .cont {
+    padding: 10px 5px; }
+
+  .el__bg {
+    margin: 0 auto; }
+
+  .el__content {
+    padding: 20px; }
+
+  .el__close-btn {
+    height: 30px;
+    width: 30px; } }
 
 /*# sourceMappingURL=custom.css.map */

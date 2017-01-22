@@ -1102,8 +1102,14 @@ body {
         h4 {
             font-size: 22px !important;
         }
+        p{
+            font-size:20px !important
+        }
     }
-    .job-container{
+    .job-container, .about{
+        h2{
+            font-size: 28px !important;
+        }
         h4{
             font-size: 20px !important;
         }
@@ -1151,4 +1157,17 @@ body {
         top: 240px;
     }
 
+    .cont{
+        padding: 10px 5px;
+    }
+    .el__bg{
+        margin: 0 auto;
+    }
+    .el__content{
+        padding:20px;
+    }
+    .el__close-btn{
+        height:30px;
+        width: 30px
+    }
 }
