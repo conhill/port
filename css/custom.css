@@ -848,6 +848,12 @@ body {
 
   .el__close-btn {
     height: 30px;
-    width: 30px; } }
+    width: 30px; }
+
+  .el__heading {
+    font-size: 13px; }
+
+  .skills-container {
+    font-size: 28px !important; } }
 
 /*# sourceMappingURL=custom.css.map */
