@@ -5,3 +5,13 @@
 	symlinks = false
 	ignorecase = true
 	hideDotFiles = dotGitOnly
+[diff]
+ tool = bc4
+[difftool "bc4"]
+ cmd =  "C:/program\\ files\\ /beyond\\ compare\\ 4/bcomp.exe $LOCAL $REMOTE"
+[merge]
+ tool = bc4
+[mergetool "bc4"]
+ cmd = "C:/Program\\ Files\\ /Beyond\\ Compare\\ 4/Bcomp.exe $LOCAL $REMOTE $BASE $MERGED"
+ trustExitCode = true
+ keepBackup = false
