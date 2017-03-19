@@ -91,7 +91,7 @@ body.loaded {
 
 .layer-0 h1 {
   font-family: ArchivoBlack;
-  font-size: 12.5vw; }
+  font-size: 13.5vw; }
 
 .parallax-layer {
   width: 107%;
@@ -214,6 +214,17 @@ body {
     padding: 0 5px; }
     .nav-items li a {
       color: #FFF; }
+
+section.passed {
+  opacity: 1;
+  top: 0px;
+  transform: none;
+  transition: all 1s;
+  transition-delay: 0.2s; }
+
+section {
+  opacity: 0;
+  top: 2.5vw; }
 
 .work-experience .job-container, .work-experience .about-container, .about .job-container, .about .about-container {
   width: 70%;

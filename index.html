@@ -2,13 +2,13 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="../../port/css/custom.min.css">
+    <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="../../port/css/Skeleton-2.0.4/css/skeleton.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans+Condensed:300" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Connor Hill - Portfolio Site</title>
     <meta name="description" content="Portoflio site of Connor Hill showing previous works and new techniques.">
-
+       
 </head>
 
 <body>
@@ -28,7 +28,7 @@
     </div>
     <div id="scene" class="parallax-container" style="position: relative;overflow: visible; width: 100%;  height: 1000px;">
         <div class="parallax-layer layer-0" data-depth=".1"  data-parallax-speed="0.05" data-max-scroll="1000">
-            <h1>Connor Hill</h1>
+            <h1>Connor Hill3</h1>
         </div>
         <div class="parallax-layer layer-1 layer" data-parallax-speed="0.1" data-max-scroll="1000"></div>
         <div class="parallax-layer layer-2 layer" data-depth=".1"   data-parallax-speed="0.3" data-max-scroll="1000"></div>
@@ -41,7 +41,7 @@
 
 
     <div class="content">
-        <div class="six columns work-experience">
+        <section class="six columns work-experience">
             <div class="job-container">
                 <h2>WORK EXPERIENCE</h2>
                 <div class="job">
@@ -60,16 +60,16 @@
                     <p>(New Paltz, New York)</p>
                 </div>
             </div>
-        </div>
-        <div class="six columns about">
+        </section>
+        <section class="six columns about">
             <div class="about-container">
                 <h2>ABOUT ME</h2>
                 <p> I am a Front-End Developer out of New York.</p>
                 <p>SUNY New Paltz graduate in Computer Science with a minor in <span class="minerals">Geology</span>.</p>
                 <p> Originally self taught PHP, HTML and CSS and honed my skills with various frameworks and technologies over the past 3 years working for multiple companies.</p>
             </div>
-        </div>
-        <div class="twelve columns technologies">
+        </section>
+        <section class="twelve columns technologies">
             <div class="skills-container">
                 <h2>Skills</h2>
                 <div class="skills">
@@ -89,8 +89,8 @@
                     <p>Bootstrap, Skeleton. Github, Git, BitBucket</p>
                 </div>
             </div>
-        </div>
-<div class="twelve columns testt">
+        </section>
+    <section class="twelve columns work">
         <div class="cont s--inactive">
           <!-- cont inner start -->
           <div class="cont__inner">
@@ -157,7 +157,7 @@
           </div>
           <!-- cont inner end -->
         </div>
-        </div>
+        </section>
         <!-- Footer -->
         <footer>
             <div class="twelve columns social">
@@ -204,13 +204,13 @@
         var pageLoaded = false;
         var timeElapsed = false;
 
-        function fadeOutLoadScreen() {
-            if (timeElapsed && pageLoaded) {
-                $('body').addClass('loaded');
-                $('.wrapper').addClass('loaded');
-                $(".loader").addClass("loaded");
-            }
-        }
+        // function fadeOutLoadScreen() {
+        //     if (timeElapsed && pageLoaded) {
+        //         $('body').addClass('loaded');
+        //         $('.wrapper').addClass('loaded');
+        //         $(".loader").addClass("loaded");
+        //     }
+        // }
 
         setTimeout(function () {
             timeElapsed = true;
@@ -229,8 +229,15 @@
 
      var scene=document.getElementById("scene"), parallax = new Parallax(scene);
 
+    function fadeOutLoadScreen() {
+            if (timeElapsed && pageLoaded) {
+                $('body').addClass('loaded');
+                $('.wrapper').addClass('loaded');
+                $(".loader").addClass("loaded");
+            
+        //}
+   // $(function () {
 
-    $(function () {
          //var scene=document.getElementById("scene"), parallax = new Parallax(scene);
         $( window ).resize(function() {
             if($(window).width() >= 585){
@@ -243,12 +250,55 @@
                 $('body').removeClass('loaded');
             }
         });
+        var workTop = jQuery('.work-experience');
+
+        var sitesTop = jQuery('.work');
+        //about
+        var aboutTop = jQuery('.about');
+        //technologies
+        var technologiesTop = jQuery('.technologies');
+       
+
+
+        var distanceFromBottom = $(window).scrollTop() + window.innerHeight;
+        console.log(distanceFromBottom);
+        //console.log('work: ' + workTop.offset().top);
+        console.log('tech: ' + technologiesTop.offset().top);
+        console.log(jQuery('.loader.loaded').is(':visible'));
+
+
+        jQuery('.loader.loaded').bind('isVisible', isVisible);
+
+
+            function isVisible(){
+               //do something
+               console.log('shown');
+
+            }
+
+
+        if(distanceFromBottom > workTop.offset().top){
+            console.log('work');
+            workTop.addClass('passed');
+        }
+        if(distanceFromBottom > aboutTop.offset().top){
+            aboutTop.addClass('passed');
+        }
+        if(distanceFromBottom > technologiesTop.offset().top + 30){
+            console.log('--------- passed ------------');
+            technologiesTop.addClass('passed');
+        }
+        if(distanceFromBottom > workTop.offset().top){
+            workTop.addClass('passed');
+        }
 
         $(window).on('scroll', function () {
+
             //console.log("rann");
            parallax.updateLayers(); 
           //parallax.enable();
-            distanceFromTop = $(window).scrollTop();
+            var distanceFromTop = $(window).scrollTop();
+            var distanceFromBottom = $(window).scrollTop() + window.innerHeight;
 
             if (distanceFromTop < 800)
                 $('#header').removeClass('scrolled');
@@ -275,7 +325,31 @@
             else {
                 $('#header').removeClass('scrolled');
                 $('#header').css('background-color', '#353E43').fadeIn(500);
+            };
+
+            console.log(distanceFromBottom);
+           // console.log('work: ' + workTop.offset().top);
+            console.log('tech: ' + technologiesTop.offset().top);
+            if(distanceFromBottom > workTop.offset().top){
+               // console.log('work2');
+                workTop.addClass('passed');
             }
+            if(distanceFromBottom > aboutTop.offset().top){
+                aboutTop.addClass('passed');
+            }
+            if(distanceFromBottom > technologiesTop.offset().top){
+                console.log('--------------- test ---------------');
+                technologiesTop.addClass('passed');
+            }
+            if(distanceFromBottom > sitesTop.offset().top){
+                sitesTop.addClass('passed');
+            }
+            // }/sitesTop
+            //  if(distanceFromBottom > workTop.offset().top){
+            //     workTop.addClass('passed');
+            // }
+
+            jQuery()
         });
 
         var $cont = document.querySelector('.cont');
@@ -301,8 +375,8 @@
             document.querySelector('.el.s--active').classList.remove('s--active');
           });
         });
-
-    });
+    }
+    }//);
 </script>
 </body>
 
