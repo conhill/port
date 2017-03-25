@@ -79,8 +79,8 @@ body.loaded {
 }
 
 .wrapper {
-    visibility: hidden;
-    background: black;
+    //visibility: hidden;
+   // background: black;
 }
 
 .wrapper.loaded {
@@ -261,7 +261,7 @@ body {
     padding: 10px;
     background-color: #353E43;
     transition: all 0.25s ease-in-out;
-    z-index: 21;
+    z-index: 999999;
 
     &.scrolled {
         background-color: #DFE4E8;
