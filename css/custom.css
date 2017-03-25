@@ -39,6 +39,9 @@ body.loaded {
   position: relative;
   overflow: visible; }
 
+.wrapper {
+  background: white; }
+
 .wrapper.loaded {
   visibility: visible; }
 
