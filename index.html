@@ -193,7 +193,6 @@
      */
 
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || $(window).width() < 601) {
-        // some code..
         $('body').addClass('mobile-loaded');
         $(".loader").addClass("mobile-loaded");
         $('.wrapper').addClass('loaded');
@@ -203,14 +202,6 @@
 
         var pageLoaded = false;
         var timeElapsed = false;
-
-        // function fadeOutLoadScreen() {
-        //     if (timeElapsed && pageLoaded) {
-        //         $('body').addClass('loaded');
-        //         $('.wrapper').addClass('loaded');
-        //         $(".loader").addClass("loaded");
-        //     }
-        // }
 
         setTimeout(function () {
             timeElapsed = true;
@@ -227,155 +218,121 @@
         $(this).scrollTop(0);
     });
 
-     var scene=document.getElementById("scene"), parallax = new Parallax(scene);
+    var scene=document.getElementById("scene"), parallax = new Parallax(scene);
 
     function fadeOutLoadScreen() {
-            if (timeElapsed && pageLoaded) {
-                $('body').addClass('loaded');
-                $('.wrapper').addClass('loaded');
-                $(".loader").addClass("loaded");
-            
-        //}
-   // $(function () {
+        if (timeElapsed && pageLoaded) {
+            var body = $('body');
+            body.addClass('loaded');
+            $('.wrapper').addClass('loaded');
+            $(".loader").addClass("loaded");
 
          //var scene=document.getElementById("scene"), parallax = new Parallax(scene);
-        $( window ).resize(function() {
-            if($(window).width() >= 585){
-                //console.log("loaded");
-                $('body').addClass('loaded');
-                $('body').removeClass('mobile-loaded');
-            }
-            else{
-                $('body').addClass('mobile-loaded');
-                $('body').removeClass('loaded');
-            }
-        });
-        var workTop = jQuery('.work-experience');
-
-        var sitesTop = jQuery('.work');
-        //about
-        var aboutTop = jQuery('.about');
-        //technologies
-        var technologiesTop = jQuery('.technologies');
-       
-
-
-        var distanceFromBottom = $(window).scrollTop() + window.innerHeight;
-        console.log(distanceFromBottom);
-        //console.log('work: ' + workTop.offset().top);
-        console.log('tech: ' + technologiesTop.offset().top);
-        console.log(jQuery('.loader.loaded').is(':visible'));
-
-
-        jQuery('.loader.loaded').bind('isVisible', isVisible);
-
-
-            function isVisible(){
-               //do something
-               console.log('shown');
-
-            }
-
-
-        if(distanceFromBottom > workTop.offset().top){
-            console.log('work');
-            workTop.addClass('passed');
-        }
-        if(distanceFromBottom > aboutTop.offset().top){
-            aboutTop.addClass('passed');
-        }
-        if(distanceFromBottom > technologiesTop.offset().top + 30){
-            console.log('--------- passed ------------');
-            technologiesTop.addClass('passed');
-        }
-        if(distanceFromBottom > workTop.offset().top){
-            workTop.addClass('passed');
-        }
-
-        $(window).on('scroll', function () {
-
-            //console.log("rann");
-           parallax.updateLayers(); 
-          //parallax.enable();
-            var distanceFromTop = $(window).scrollTop();
+            $( window ).resize(function() {
+                if($(window).width() >= 585){
+                    //console.log("loaded");
+                    body.addClass('loaded');
+                    body.removeClass('mobile-loaded');
+                }
+                else{
+                    body.addClass('mobile-loaded');
+                    body.removeClass('loaded');
+                }
+            });
+            var workTop = jQuery('.work-experience');
+            var sitesTop = jQuery('.work');
+            var aboutTop = jQuery('.about');
+            var technologiesTop = jQuery('.technologies');
             var distanceFromBottom = $(window).scrollTop() + window.innerHeight;
 
-            if (distanceFromTop < 800)
-                $('#header').removeClass('scrolled');
+            jQuery('.loader.loaded').bind('isVisible', isVisible);
 
-
-            if (distanceFromTop >= 800) {
-                $('#header').addClass('scrolled');
-                $('#header').css('background-color', '#DFE4E8').fadeIn(500);
-            }
-            else if (distanceFromTop < 800 && distanceFromTop >= 700)
-                $('#header').css('background-color', '#CACFD3').fadeIn(500);
-            else if (distanceFromTop < 700 && distanceFromTop >= 600)
-                $('#header').css('background-color', '#B5BBBF').fadeIn(500);
-            else if (distanceFromTop < 600 && distanceFromTop >= 500)
-                $('#header').css('background-color', '#9FA6AA').fadeIn(500);
-            else if (distanceFromTop < 500 && distanceFromTop >= 400)
-                $('#header').css('background-color', '#8A9196').fadeIn(500);
-            else if (distanceFromTop < 400 && distanceFromTop >= 300)
-                $('#header').css('background-color', '#757C81').fadeIn(500);
-            else if (distanceFromTop < 300 && distanceFromTop >= 200)
-                $('#header').css('background-color', '#60686C').fadeIn(500);
-            else if (distanceFromTop < 200 && distanceFromTop >= 100)
-                $('#header').css('background-color', '#4A5358').fadeIn(500);
-            else {
-                $('#header').removeClass('scrolled');
-                $('#header').css('background-color', '#353E43').fadeIn(500);
-            };
-
-            console.log(distanceFromBottom);
-           // console.log('work: ' + workTop.offset().top);
-            console.log('tech: ' + technologiesTop.offset().top);
             if(distanceFromBottom > workTop.offset().top){
-               // console.log('work2');
                 workTop.addClass('passed');
             }
             if(distanceFromBottom > aboutTop.offset().top){
                 aboutTop.addClass('passed');
             }
-            if(distanceFromBottom > technologiesTop.offset().top){
-                console.log('--------------- test ---------------');
+            if(distanceFromBottom > technologiesTop.offset().top + 30){
                 technologiesTop.addClass('passed');
             }
-            if(distanceFromBottom > sitesTop.offset().top){
-                sitesTop.addClass('passed');
+            if(distanceFromBottom > workTop.offset().top){
+                workTop.addClass('passed');
             }
-            // }/sitesTop
-            //  if(distanceFromBottom > workTop.offset().top){
-            //     workTop.addClass('passed');
-            // }
 
-            jQuery()
-        });
+            $(window).on('scroll', function () {
 
-        var $cont = document.querySelector('.cont');
-        var $elsArr = [].slice.call(document.querySelectorAll('.el'));
-        var $closeBtnsArr = [].slice.call(document.querySelectorAll('.el__close-btn'));
+                parallax.updateLayers(); 
 
-        setTimeout(function() {
-          $cont.classList.remove('s--inactive');
-        }, 200);
+                var distanceFromTop = $(window).scrollTop();
+                var distanceFromBottom = $(window).scrollTop() + window.innerHeight;
+                var header = $('#header');
+                if (distanceFromTop < 800){
+                    header.removeClass('scrolled');
+                }
 
-        $elsArr.forEach(function($el) {
-          $el.addEventListener('click', function() {
-            if (this.classList.contains('s--active')) return;
-            $cont.classList.add('s--el-active');
-            this.classList.add('s--active');
-          });
-        });
+                if (distanceFromTop >= 800) {
+                    header.addClass('scrolled');
+                    header.css('background-color', '#DFE4E8').fadeIn(500);
+                }
+                else if (distanceFromTop < 800 && distanceFromTop >= 700)
+                    header.css('background-color', '#CACFD3').fadeIn(500);
+                else if (distanceFromTop < 700 && distanceFromTop >= 600)
+                    header.css('background-color', '#B5BBBF').fadeIn(500);
+                else if (distanceFromTop < 600 && distanceFromTop >= 500)
+                    header.css('background-color', '#9FA6AA').fadeIn(500);
+                else if (distanceFromTop < 500 && distanceFromTop >= 400)
+                    header.css('background-color', '#8A9196').fadeIn(500);
+                else if (distanceFromTop < 400 && distanceFromTop >= 300)
+                    header.css('background-color', '#757C81').fadeIn(500);
+                else if (distanceFromTop < 300 && distanceFromTop >= 200)
+                    header.css('background-color', '#60686C').fadeIn(500);
+                else if (distanceFromTop < 200 && distanceFromTop >= 100)
+                    header.css('background-color', '#4A5358').fadeIn(500);
+                else {
+                    header.removeClass('scrolled');
+                    header.css('background-color', '#353E43').fadeIn(500);
+                };
 
-        $closeBtnsArr.forEach(function($btn) {
-          $btn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            $cont.classList.remove('s--el-active');
-            document.querySelector('.el.s--active').classList.remove('s--active');
-          });
-        });
-    }
+
+                if(distanceFromBottom > workTop.offset().top){
+                    workTop.addClass('passed');
+                }
+                if(distanceFromBottom > aboutTop.offset().top){
+                    aboutTop.addClass('passed');
+                }
+                if(distanceFromBottom > technologiesTop.offset().top){
+                    technologiesTop.addClass('passed');
+                }
+                if(distanceFromBottom > sitesTop.offset().top){
+                    sitesTop.addClass('passed');
+                }
+            });
+
+            var $cont = document.querySelector('.cont');
+            var $elsArr = [].slice.call(document.querySelectorAll('.el'));
+            var $closeBtnsArr = [].slice.call(document.querySelectorAll('.el__close-btn'));
+
+            setTimeout(function() {
+              $cont.classList.remove('s--inactive');
+            }, 200);
+
+            $elsArr.forEach(function($el) {
+              $el.addEventListener('click', function() {
+                if (this.classList.contains('s--active')) return;
+                $cont.classList.add('s--el-active');
+                this.classList.add('s--active');
+              });
+            });
+
+            $closeBtnsArr.forEach(function($btn) {
+              $btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                $cont.classList.remove('s--el-active');
+                document.querySelector('.el.s--active').classList.remove('s--active');
+              });
+            });
+        }
     }//);
 </script>
 </body>
