@@ -28,7 +28,7 @@
     </div>
     <div id="scene" class="parallax-container" style="position: relative;overflow: visible; width: 100%;  height: 1000px;">
         <div class="parallax-layer layer-0" data-depth=".1"  data-parallax-speed="0.05" data-max-scroll="1000">
-            <h1>Connor Hill~</h1>
+            <h1>Connor Hill</h1>
         </div>
         <div class="parallax-layer layer-1 layer" data-parallax-speed="0.1" data-max-scroll="1000"></div>
         <div class="parallax-layer layer-2 layer" data-depth=".1"   data-parallax-speed="0.3" data-max-scroll="1000"></div>
@@ -247,18 +247,14 @@
 
             jQuery('.loader.loaded').bind('isVisible', isVisible);
 
-            if(distanceFromBottom > workTop.offset().top){
+            if(distanceFromBottom > workTop.offset().top)
                 workTop.addClass('passed');
-            }
-            if(distanceFromBottom > aboutTop.offset().top){
+            if(distanceFromBottom > aboutTop.offset().top)
                 aboutTop.addClass('passed');
-            }
-            if(distanceFromBottom > technologiesTop.offset().top + 30){
+            if(distanceFromBottom > technologiesTop.offset().top + 30)
                 technologiesTop.addClass('passed');
-            }
-            if(distanceFromBottom > workTop.offset().top){
+            if(distanceFromBottom > workTop.offset().top)
                 workTop.addClass('passed');
-            }
 
             $(window).on('scroll', function () {
 
