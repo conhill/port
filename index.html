@@ -247,14 +247,18 @@
 
             jQuery('.loader.loaded').bind('isVisible', isVisible);
 
-            if(distanceFromBottom > workTop.offset().top)
+            if(distanceFromBottom > workTop.offset().top){
                 workTop.addClass('passed');
-            if(distanceFromBottom > aboutTop.offset().top)
+            }
+            if(distanceFromBottom > aboutTop.offset().top){
                 aboutTop.addClass('passed');
-            if(distanceFromBottom > technologiesTop.offset().top + 30)
+            }
+            if(distanceFromBottom > technologiesTop.offset().top + 30){
                 technologiesTop.addClass('passed');
-            if(distanceFromBottom > workTop.offset().top)
+            }
+            if(distanceFromBottom > workTop.offset().top){
                 workTop.addClass('passed');
+            }
 
             $(window).on('scroll', function () {
 
@@ -263,6 +267,10 @@
                 var distanceFromTop = $(window).scrollTop();
                 var distanceFromBottom = $(window).scrollTop() + window.innerHeight;
                 var header = $('#header');
+                var workTop = jQuery('.work-experience');
+                var sitesTop = jQuery('.work');
+                var aboutTop = jQuery('.about');
+                var technologiesTop = jQuery('.technologies');
                 if (distanceFromTop < 800){
                     header.removeClass('scrolled');
                 }
