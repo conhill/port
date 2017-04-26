@@ -245,7 +245,7 @@
             var technologiesTop = jQuery('.technologies');
             var distanceFromBottom = $(window).scrollTop() + window.innerHeight;
 
-            jQuery('.loader.loaded').bind('isVisible', isVisible);
+           // jQuery('.loader.loaded').bind('isVisible', isVisible);
 
             if(distanceFromBottom > workTop.offset().top){
                 workTop.addClass('passed');
@@ -298,7 +298,7 @@
                     header.css('background-color', '#353E43').fadeIn(500);
                 };
 
-
+                console.log(distanceFromBottom);
                 if(distanceFromBottom > workTop.offset().top){
                     workTop.addClass('passed');
                 }
