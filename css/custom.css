@@ -38,7 +38,11 @@ canvas {
   background-color: transparent;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%; }
+  background-position: 50% 50%;
+  visibility: hidden; }
+
+#particles-js.loaded {
+  visibility: visible; }
 
 body {
   background: #415a6c;
