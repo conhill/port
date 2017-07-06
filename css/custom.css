@@ -28,7 +28,8 @@ canvas {
   display: block;
   background: transparent;
   position: fixed;
-  z-index: -1; }
+  z-index: -1;
+  pointer-events: none; }
 
 #particles-js {
   position: absolute;
