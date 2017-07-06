@@ -273,9 +273,11 @@ h1 {
     height: 72px;
     width: 100%;
     background-image: url("../../port/img/blend-mountains.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     content: "";
     position: absolute;
-    top: 0;
+    top: -72px;
     left: 0;
     z-index: -1;
     width: 100%;
