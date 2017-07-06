@@ -23,20 +23,20 @@ $contentFadeinAT: 0.5s;
 
 @font-face {
     font-family: AurulentSans;
-    //src: url(../../port/font/AurulentSans-Regular.otf);
-   src: url(/font/AurulentSans-Regular.otf);
+    src: url(../../port/font/AurulentSans-Regular.otf);
+   // src: url(/font/AurulentSans-Regular.otf);
 }
 
 @font-face {
     font-family: AurulentSans-Bold;
-    // src: url(../../port/font/AurulentSans-Bold.otf);
-    src: url(/font/AurulentSans-Bold.otf);
+    src: url(../../port/font/AurulentSans-Bold.otf);
+    // src: url(/font/AurulentSans-Bold.otf);
 }
 
 @font-face {
     font-family: ArchivoBlack;
-    // src: url(../../port/font/ArchivoBlack.otf);
-    src: url(/font/ArchivoBlack.otf);
+    src: url(../../port/font/ArchivoBlack.otf);
+    // src: url(/font/ArchivoBlack.otf);
 }
 
 html {
@@ -207,8 +207,8 @@ h1 {
 .layer-2 {
     top: 30vh;
     z-index: 5;
-    //background-image: url("../../port/img//fw-back-mountains.png");
-    background-image: url("/img/fw-back-mountains.png");
+    background-image: url("../../port/img//fw-back-mountains.png");
+    // background-image: url("/img/fw-back-mountains.png");
     background-size: 110% 35vh;
     background-repeat: no-repeat;
     left: -3%;
@@ -217,8 +217,8 @@ h1 {
 .layer-3 {;
     top: 45vh;
     z-index: 10;
-    //background-image: url("../../port/img//middle-mountain22.png");
-    background-image: url("/img/middle-mountain22.png");
+    background-image: url("../../port/img//middle-mountain22.png");
+    // background-image: url("/img/middle-mountain22.png");
     background-repeat: no-repeat;
     background-size: 58% 35vh;
     left: 3vw;
@@ -227,8 +227,8 @@ h1 {
 .layer-4 {
     top: 36vh;
     z-index: 15;
-    //background-image: url("../../port/img//fw-side-mountains.png");
-    background-image: url("/img/fw-side-mountains.png");
+    background-image: url("../../port/img//fw-side-mountains.png");
+    // background-image: url("/img/fw-side-mountains.png");
     background-size: 110% 36vh;
     background-repeat: no-repeat;
     left: -4%;
@@ -248,8 +248,8 @@ h1 {
 .layer-6 {
     top: 55vh;
     z-index: 25;
-   // background-image: url("../../port/img//fw-font-mountains.png");
-   background-image: url("/img/fw-font-mountains.png");
+   background-image: url("../../port/img//fw-font-mountains.png");
+   // background-image: url("/img/fw-font-mountains.png");
     background-size: 110% 34vh;
     background-repeat: no-repeat;
     left: -7%;
